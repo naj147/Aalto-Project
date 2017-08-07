@@ -1,1 +1,1 @@
-Aalto-project
+LocationUpdatesForegroundService
