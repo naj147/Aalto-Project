@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.jeomix.android.gpstracker.login.LoginFragment">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/bubble"
+        android:gravity="center_vertical"
+        android:paddingStart="32dp"
+        android:text="Email"
+        android:textColor="#ffffff"
+        android:paddingLeft="32dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bubble"
+        android:gravity="center_vertical"
+        android:paddingStart="32dp"
+        android:text="Password"
+        android:textColor="#ffffff"
+        android:paddingLeft="32dp" />
+    <io.saeid.fabloading.LoadingView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="92dp"
+        android:id="@+id/loginbuttonview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:mfl_onclickLoading="true"
+        app:mfl_duration="200"
+        />
+    <TextView
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="26dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"/>
+
+
+</LinearLayout>

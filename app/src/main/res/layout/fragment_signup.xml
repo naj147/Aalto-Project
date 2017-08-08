@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.jeomix.android.gpstracker.login.SignUpFragment">
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="52dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/bubble"
+        android:gravity="center_vertical"
+        android:paddingStart="32dp"
+        android:text="Email"
+        android:paddingLeft="32dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bubble"
+        android:gravity="center_vertical"
+        android:textColor="#ffffff"
+        android:paddingStart="32dp"
+        android:text="Password"
+        android:paddingLeft="32dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bubble"
+        android:gravity="center_vertical"
+        android:textColor="#ffffff"
+        android:paddingStart="32dp"
+        android:text="Confirm Password"
+        android:paddingLeft="32dp" />
+
+        <io.saeid.fabloading.LoadingView
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="30dp"
+           android:layout_gravity="center_horizontal"
+            android:id="@+id/choicebuttonview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:mfl_onclickLoading="true"
+            app:mfl_duration="200"
+            />
+
+    <com.github.jorgecastilloprz.FABProgressCircle
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/fabProgressCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.5"
+        app:arcColor="#FF5722"
+        app:arcWidth="2dp"
+        app:finalIcon="@drawable/ic_done"
+        android:scaleY="1.5"
+        app:roundedStroke="true"
+        >
+        <io.saeid.fabloading.LoadingView
+
+            android:id="@+id/signupbuttonview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rippleColor="@color/fab_orange_light"
+            app:mfl_onclickLoading="true"
+            app:mfl_duration="200"
+            />
+    </com.github.jorgecastilloprz.FABProgressCircle>
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admin"/>
+
+
+</LinearLayout>

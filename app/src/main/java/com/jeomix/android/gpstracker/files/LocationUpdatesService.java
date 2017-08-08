@@ -27,6 +27,7 @@ import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.jeomix.android.gpstracker.R;
 
 /**
  * A bound and started service that is promoted to a foreground service when location updates have

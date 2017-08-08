@@ -14,6 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.jeomix.android.gpstracker.MainLogin;
+import com.jeomix.android.gpstracker.R;
+
 public class SplashScreen extends AppCompatActivity {
     private static final int REQUEST_PERMISSIONS = 100;
     boolean boolean_permission;
@@ -25,7 +28,7 @@ public class SplashScreen extends AppCompatActivity {
     }
 
     private  void forward(){
-        Intent intent = new Intent(SplashScreen.this,MainActivity.class);
+        Intent intent = new Intent(SplashScreen.this, MainLogin.class);
         startActivity(intent);
     }
 

@@ -23,6 +23,8 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Patterns;
 
+import com.jeomix.android.gpstracker.R;
+
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;

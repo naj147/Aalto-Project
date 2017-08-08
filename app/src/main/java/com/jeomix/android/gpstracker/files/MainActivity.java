@@ -51,8 +51,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.hanks.htextview.base.HTextView;
-import com.hanks.htextview.scale.ScaleTextView;
+
+import com.jeomix.android.gpstracker.BuildConfig;
+import com.jeomix.android.gpstracker.R;
 
 import io.saeid.fabloading.LoadingView;
 
@@ -81,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements
     private EditText mTextLabel;
     private EditText mTextVin;
     private TextInputLayout til;
-    HTextView scaleTextView;
 
     //
     String Error="";
@@ -120,7 +120,6 @@ public class MainActivity extends AppCompatActivity implements
         mTextLabel=(EditText)findViewById(R.id.labelField);
         mTextVin=(EditText)findViewById(R.id.vinField);
         til = (TextInputLayout)  findViewById(R.id.vinInputLayout);
-        scaleTextView= (HTextView) findViewById(R.id.errorScaleText) ;
         mTextVin.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -139,8 +138,6 @@ public class MainActivity extends AppCompatActivity implements
                     til.setErrorEnabled(true);
                     Error="You need to enter a Vin";
                     til.setError(Error);
-                    scaleTextView.animate().start();
-                    scaleTextView.setText(Error);
                 }
                 else{
 
