@@ -15,8 +15,17 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.jeomix.android.gpstracker.R;
+import com.jeomix.android.gpstracker.files.ErrorActivity;
+import com.jeomix.android.gpstracker.files.Helper.UserHelper;
+import com.jeomix.android.gpstracker.files.Main2Activity;
 import com.jeomix.android.gpstracker.files.MainActivity;
+import com.jeomix.android.gpstracker.files.User;
 import com.jeomix.android.gpstracker.files.Utils;
 
 import io.saeid.fabloading.LoadingView;
@@ -42,13 +51,34 @@ public class LoginFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         setupLoginButton(view);
         mAuth = FirebaseAuth.getInstance();
-
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("users");
         mAuthListener = firebaseAuth -> {
             FirebaseUser user = firebaseAuth.getCurrentUser();
             if (user != null) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
-                startActivity(intent);
-                // User is signed in
+                if(UserHelper.getCurrentUser()==null){
+                    myRef.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            //Retrieving User From DB
+                                User user = dataSnapshot.getValue(User.class);
+                                UserHelper.setCurrentUser(user);
+                                router(user.getIsAdmin());
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                            router(3);
+                        }
+
+                    });
+                }
+                else{
+                    // User is signed in
+                    router(UserHelper.getCurrentUser().getIsAdmin());
+                }
+
                 Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
             } else {
 
@@ -136,6 +166,30 @@ public class LoginFragment extends Fragment {
 
             }
         });
+    }
+    void router ( int route){
+        Intent intent=null;
+            switch (route){
+                case 0:
+                    //Vehicle
+                    intent = new Intent(getContext(), MainActivity.class);
+                    break;
+                case 1:
+                    //Not yet Approved Admin
+                    intent = new Intent(getContext(), ErrorActivity.class);
+                    break;
+                case 2:
+                    //admin
+                    intent = new Intent(getContext(), Main2Activity.class);
+                    break;
+                case 3:
+                    //banned
+                    intent = new Intent(getContext(), ErrorActivity.class);
+                    break;
+            }
+            if(intent!=null)
+            startActivity(intent);
+
     }
 
 }

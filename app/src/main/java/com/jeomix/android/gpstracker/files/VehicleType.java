@@ -13,7 +13,7 @@ public enum VehicleType {
     truck(2),
     bus(3);
     private final int type;
-    VehicleType(int type)
+    private VehicleType(int type)
     {
         this.type = type;
     }

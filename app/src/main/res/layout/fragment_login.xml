@@ -17,6 +17,7 @@
         android:paddingStart="32dp"
         android:textColor="#ffffff"
         android:paddingLeft="32dp"
+        android:hint="@string/email"
         android:inputType="textEmailAddress" />
     <EditText
         android:id="@+id/loginPassInputText"
@@ -29,6 +30,7 @@
         android:paddingStart="32dp"
         android:textColor="#ffffff"
         android:paddingLeft="32dp"
+        android:hint="@string/password"
         android:inputType="textPassword" />
     <io.saeid.fabloading.LoadingView
         android:layout_gravity="center_horizontal"

@@ -45,6 +45,7 @@ import com.jeomix.android.gpstracker.R;
  */
 public class LocationUpdatesService extends Service {
 
+
     private static final String PACKAGE_NAME =
             "com.jeomix.android.gpstracker.files";
 
@@ -290,6 +291,7 @@ public class LocationUpdatesService extends Service {
         intent.putExtra(EXTRA_LOCATION, location);
         LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
         // Update notification content if running as a foreground service.
+        //TODO REGISTER THE LOCATION IN THE DB
         if (serviceIsRunningInForeground(this)) {
             mNotificationManager.notify(NOTIFICATION_ID, getNotification());
         }
@@ -300,7 +302,9 @@ public class LocationUpdatesService extends Service {
      */
     private void createLocationRequest() {
         mLocationRequest = new LocationRequest();
-        mLocationRequest.setSmallestDisplacement(UPDATE_INTERVAL_IN_METERS);
+        
+        //REMOVE THE METERS UPDATE TESTING PURPOSES
+//        mLocationRequest.setSmallestDisplacement(UPDATE_INTERVAL_IN_METERS);
         mLocationRequest.setInterval(UPDATE_INTERVAL_IN_MILLISECONDS);
         mLocationRequest.setFastestInterval(FASTEST_UPDATE_INTERVAL_IN_MILLISECONDS);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);

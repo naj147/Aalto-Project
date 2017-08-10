@@ -63,9 +63,12 @@ public class MainLogin extends AppCompatActivity {
                 }
             });
             binding.bottomSignUp.animate().alpha(0f);
-            binding.topSignUp.setClickable(false);
-            binding.bottomSignUp.setClickable(false);
+            binding.topSignUp.setVisibility(View.GONE);
+            binding.bottomSignUp.setVisibility(View.GONE);
+
         } else {
+            binding.topSignUp.setVisibility(View.VISIBLE);
+            binding.bottomSignUp.setVisibility(View.VISIBLE);
             binding.topLogin.setRotation(-90);
             binding.topSignUp.animate().rotation(0).setListener(new AnimatorListenerAdapter() {
                 @Override

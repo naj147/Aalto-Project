@@ -16,6 +16,7 @@
 
 package com.jeomix.android.gpstracker.files;
 
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -52,8 +53,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.github.florent37.materialtextfield.MaterialTextField;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.jeomix.android.gpstracker.BuildConfig;
 import com.jeomix.android.gpstracker.R;
+import com.jeomix.android.gpstracker.files.Helper.UserHelper;
 
 import io.saeid.fabloading.LoadingView;
 
@@ -82,9 +92,11 @@ public class MainActivity extends AppCompatActivity implements
     private EditText mTextLabel;
     private EditText mTextVin;
     private TextInputLayout til;
+    VehicleType typeVechicle=VehicleType.motorCycle;
+    FirebaseDatabase database ;
 
     //
-    String Error="";
+    String Error;
 
     // Monitors the state of the connection to the service.
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -105,8 +117,12 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
+
+        //TODO : VERIFY CURRENT USER IS A VEHICLE USER
+        User user =UserHelper.getCurrentUser();
+        //Initialise link to db
+        database = FirebaseDatabase.getInstance();
 
         // Check that the user hasn't revoked permissions by going to Settings.
         if (Utils.requestingLocationUpdates(this)) {
@@ -114,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements
                 requestPermissions();
             }
         }
+        Error="You need to enter a Vin";
         myReceiver = new MyReceiver();
         mLoadViewMarker = (LoadingView) findViewById(R.id.tracker_view);
         mLoadViewVehicule=(LoadingView)findViewById(R.id.type_view);
@@ -140,18 +157,22 @@ public class MainActivity extends AppCompatActivity implements
                     til.setError(Error);
                 }
                 else{
+                    if(string.trim().length()!=17){
+                        Error="Vin number must be 17 character";
+                        til.setError(Error);
+                    }
+                    else{
+                        Error="";
+                        til.setErrorEnabled(false);
+                    }
 
-                    Error="";
-                    til.setErrorEnabled(false);
                 }
-
-
-
             }
         });
 
 
         setupVehicules();
+        loadFieldsFromDB();
 
         }
 
@@ -287,19 +308,16 @@ public class MainActivity extends AppCompatActivity implements
                         findViewById(R.id.activity_main),
                         R.string.permission_denied_explanation,
                         Snackbar.LENGTH_INDEFINITE)
-                        .setAction(R.string.settings, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                // Build intent that displays the App settings screen.
-                                Intent intent = new Intent();
-                                intent.setAction(
-                                        Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                                Uri uri = Uri.fromParts("package",
-                                        BuildConfig.APPLICATION_ID, null);
-                                intent.setData(uri);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                startActivity(intent);
-                            }
+                        .setAction(R.string.settings, view -> {
+                            // Build intent that displays the App settings screen.
+                            Intent intent = new Intent();
+                            intent.setAction(
+                                    Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                            Uri uri = Uri.fromParts("package",
+                                    BuildConfig.APPLICATION_ID, null);
+                            intent.setData(uri);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
                         })
                         .show();
             }
@@ -345,45 +363,124 @@ public class MainActivity extends AppCompatActivity implements
             mLoadViewMarker.addAnimation(Color.parseColor("#C7E7FB"), R.drawable.if_marker_on, LoadingView.FROM_RIGHT);
             mLoadViewMarker.addAnimation(Color.parseColor("#FF4218"), R.drawable.if_marker_off, LoadingView.FROM_TOP);
         }
-        mLoadViewMarker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(Error.trim().length()<=0){
-                    mLoadViewMarker.startAnimation();
-                    mLoadViewMarker.addListener(new LoadingView.LoadingListener() {
-                        @Override
-                        public void onAnimationStart(int currentItemPosition) {
+        mLoadViewMarker.setOnClickListener(v -> {
+            if(Error==null || Error.isEmpty() || Error.trim().length()<=0){
+                mLoadViewMarker.startAnimation();
+                mLoadViewMarker.addListener(new LoadingView.LoadingListener() {
+                    @Override
+                    public void onAnimationStart(int currentItemPosition) {
 
-                        }
+                    }
 
-                        @Override
-                        public void onAnimationRepeat(int nextItemPosition) {
+                    @Override
+                    public void onAnimationRepeat(int nextItemPosition) {
 
-                        }
+                    }
 
-                        @Override
-                        public void onAnimationEnd(int nextItemPosition) {
-                            int position=0;
-                            if(!mLoadViewMarker.getDrawable().getConstantState().equals(ContextCompat.getDrawable(getApplicationContext(),R.drawable.if_marker_on).getConstantState())){
-                                Toast.makeText(getApplicationContext(),"Marker ON",Toast.LENGTH_SHORT).show();
-                                if (!checkPermissions()) {
-                                    requestPermissions();
-                                } else {
-                                    mService.requestLocationUpdates();
-                                }
-                            }else{
-                                Toast.makeText(getApplicationContext(),"Marker OFF",Toast.LENGTH_SHORT).show();
-                                mService.removeLocationUpdates();
+                    @Override
+                    public void onAnimationEnd(int nextItemPosition) {
+                        if(!mLoadViewMarker.getDrawable().getConstantState().equals(ContextCompat.getDrawable(getApplicationContext(),R.drawable.if_marker_on).getConstantState())){
+                            Toast.makeText(getApplicationContext(),"Marker ON",Toast.LENGTH_SHORT).show();
+                            if (!checkPermissions()) {
+                                requestPermissions();
+                            } else {
+                                //REGISTER THE CAR INFOS HERE
+                                mService.requestLocationUpdates();
+                                String label =mTextLabel.getText().toString();
+                                String vin= mTextVin.getText().toString();
+                                User user = UserHelper.getCurrentUser();
+                                Vehicle v=new Vehicle(typeVechicle,vin);
+                                v.setId(UserHelper.getCurrentUser().getId());
+                                v.setLabel(label);
+                                DatabaseReference myRef = database.getReference("vehicules").child(user.getId());
+                                myRef.setValue(v).addOnCompleteListener(task -> {
+                                    if(task.isSuccessful()){
+
+                                    }else{
+                                        //Connection unsuccesful to the DB
+                                        mLoadViewMarker.clearAnimation();
+                                        Snackbar.make(
+                                                findViewById(R.id.activity_main),
+                                                "Connection Failed! Please check your Internet Connectivity & Relaunch The App",
+                                                Snackbar.LENGTH_SHORT).show();
+                                    }
+                                });
                             }
-
                         }
-                    });
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"ERROR: "+ Error,Toast.LENGTH_SHORT).show();
+                        else{
+                            Toast.makeText(getApplicationContext(),"Marker OFF",Toast.LENGTH_SHORT).show();
+                            mService.removeLocationUpdates();
+                        }
 
+                    }
+                });
+            }
+            else
+            {
+                Snackbar.make(
+                        findViewById(R.id.activity_main),
+                        Error,
+                        Snackbar.LENGTH_SHORT).show();
+            }
+
+        });
+
+    }
+
+    public void loadFieldsFromDB(){
+        ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+        progressDialog.setIndeterminate(true);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setTitle("Loading Data From DB");
+        progressDialog.setMessage("Please Wait Loading Content...");
+        progressDialog.show();
+        DatabaseReference myRef = database.getReference("vehicules");
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.hasChild(UserHelper.getCurrentUser().getId())){
+                    Error="";
+
+                   Vehicle v= dataSnapshot.child(UserHelper.getCurrentUser().getId()).getValue(Vehicle.class);
+                    mTextLabel.setText(v.getLabel());
+                    mTextVin.setText(v.getVin());
+                    MaterialTextField vin,label;
+                    vin=(MaterialTextField)findViewById(R.id.vinExpand);
+                    label=(MaterialTextField)findViewById(R.id.labelExpand);
+                    vin.expand();
+                    label.expand();
+                    mTextLabel.setEnabled(false);
+                    mTextVin.setEnabled(false);
+                    mLoadViewVehicule.clearAnimation();
+                    mLoadViewVehicule.removeAnimation(3);
+                    mLoadViewVehicule.removeAnimation(2);
+                    mLoadViewVehicule.removeAnimation(1);
+                    mLoadViewVehicule.removeAnimation(0);
+                    switch(v.getType()){
+                        case truck :
+                            mLoadViewVehicule.addAnimation(Color.parseColor("#FF4218"), R.drawable.if_truck, LoadingView.FROM_TOP);
+                            Toast.makeText(getApplicationContext(),"Truck ",Toast.LENGTH_SHORT).show();
+                            break;
+                        case motorCycle:
+
+                            mLoadViewVehicule.addAnimation(Color.parseColor("#C7E7FB"), R.drawable.if_motorcycle ,LoadingView.FROM_BOTTOM);
+                            typeVechicle=VehicleType.motorCycle;
+                            break;
+                        case car:
+                            mLoadViewVehicule.addAnimation(Color.parseColor("#FF4218"), R.drawable.if_car, LoadingView.FROM_LEFT);
+                            typeVechicle=VehicleType.car;
+                            break;
+                        case bus:
+                            mLoadViewVehicule.addAnimation(Color.parseColor("#C7E7FB"), R.drawable.if_schooolbus, LoadingView.FROM_RIGHT);
+                            typeVechicle=VehicleType.bus;
+                            break;
+                    }
+                    mLoadViewVehicule.setEnabled(false);
+                    progressDialog.dismiss();
                 }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
 
             }
         });
@@ -413,11 +510,30 @@ public void setupVehicules() {
 
                 @Override
                 public void onAnimationEnd(int nextItemPosition) {
+                    switch (nextItemPosition){
+                        case 0:
+                            Toast.makeText(getApplicationContext(),"Truck ",Toast.LENGTH_SHORT).show();
+                            typeVechicle=VehicleType.truck;
+                            break;
+                        case 1:
+                            typeVechicle=VehicleType.motorCycle;
+                            break;
+                        case 2:
+                            typeVechicle=VehicleType.car;
+                            break;
+                        case 3:
+                            typeVechicle=VehicleType.bus;
+                            break;
+                    }
                 }
             });
         }
     });
 }
+
+
+
+
 //    private void loadingState(Boolean ON){
 //        mLoadViewMarker.clearAnimation();
 //        mLoadViewMarker.removeAnimation(0);

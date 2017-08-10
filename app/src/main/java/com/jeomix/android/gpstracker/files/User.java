@@ -6,25 +6,30 @@ package com.jeomix.android.gpstracker.files;
 
 public class User {
 
-    private long id;
-    private String password;
+    private String id;
     private String email;
     private String token;
     private String phoneNumber;
-    Boolean isAdmin;
-    tracks online;
-
-    public tracks getOnline() {
-        return online;
+    private int isAdmin;//0 : vehicle , 1: admin waiting approval , 2 : admin, 3 :banned
+    public User() {
     }
 
-    public void setOnline(tracks online) {
-        this.online = online;
+    public User(String id){
+        this.id=id;
     }
-    public User(long id){
-        this.setId(id);
+    public User(String id, String email){
+        this(id);
+        this.email=email;
     }
-    Vehicle vehicle;
+
+//    public Tracks getOnline() {
+//        return online;
+//    }
+//
+//    public void setOnline(Tracks online) {
+//        this.online = online;
+//    }
+
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -34,29 +39,37 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public Vehicle getVehicle() {
-        return vehicle;
-    }
+//    public Vehicle getVehicle() {
+//        return vehicle;
+//    }
+//
+//    public void setVehicle(Vehicle vehicle) {
+//        this.vehicle = vehicle;
+//    }
 
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
-    }
-
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getPassword() {
-        return password;
+    public int getIsAdmin() {
+        return isAdmin;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setIsAdmin(int isAdmin) {
+        this.isAdmin = isAdmin;
     }
+
+//    public String getPassword() {
+//        return password;
+//    }
+//
+//    public void setPassword(String password) {
+//        this.password = password;
+//    }
 
     public String getEmail() {
         return email;
@@ -74,11 +87,4 @@ public class User {
         this.token = token;
     }
 
-    public Boolean getAdmin() {
-        return isAdmin;
-    }
-
-    public void setAdmin(Boolean admin) {
-        isAdmin = admin;
-    }
 }

@@ -17,7 +17,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.jeomix.android.gpstracker.R;
+import com.jeomix.android.gpstracker.files.Helper.UserHelper;
+import com.jeomix.android.gpstracker.files.User;
 import com.jeomix.android.gpstracker.files.Utils;
 
 
@@ -29,10 +34,10 @@ import io.saeid.fabloading.LoadingView;
 
 public class SignUpFragment extends Fragment {
     private static final String TAG ="SignUpFragment" ;
-    int userType=0;
-    static int choice;
+     int choice=0;
     EditText email,pass,passConf;
     private FirebaseAuth mAuth;
+    FirebaseDatabase mDatabase;
     public SignUpFragment() {
         // Required empty public constructor
     }
@@ -42,6 +47,7 @@ public class SignUpFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_signup, container, false);
         mAuth = FirebaseAuth.getInstance();
+        mDatabase=FirebaseDatabase.getInstance();
         setupSignUpButtons(view);
         return view;
     }
@@ -74,10 +80,8 @@ public class SignUpFragment extends Fragment {
                     public void onAnimationEnd(int nextItemPosition) {
                         choice = nextItemPosition;
                         if (choice == 0) {
-                            userType=0;
                             Toast.makeText(getContext(), "Admin", Toast.LENGTH_SHORT).show();
                         } else {
-                            userType=1;
                             Toast.makeText(getContext(), "Vehicle", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -107,10 +111,22 @@ public class SignUpFragment extends Fragment {
                                         Log.w(TAG, "signUpWithEmail:failed", task.getException());
                                         Toast.makeText(getContext(), "SignUpFailed",Toast.LENGTH_SHORT).show();
                                     }else{
-                                        fabProgressCircle.beginFinalAnimation();
-                                        Intent intent = getActivity().getIntent();
-                                        getActivity().finish();
-                                        startActivity(intent);
+                                        User user = new User(mAuth.getCurrentUser().getUid(),mAuth.getCurrentUser().getEmail());
+                                        user.setIsAdmin(1-choice);
+                                        DatabaseReference myRef = mDatabase.getReference("users");
+                                        myRef.child(user.getId()).setValue(user, (databaseError, databaseReference) -> {
+                                          if(databaseError==null){
+                                              UserHelper.setCurrentUser(user);
+                                              fabProgressCircle.beginFinalAnimation();
+                                              Intent intent = getActivity().getIntent();
+                                              getActivity().finish();
+                                              startActivity(intent);
+                                          }else{
+                                              //TODO : SOMETHING WENT WRONG PAGE REFRESH YOUR CONNECTION MESSAGE :)
+                                          }
+
+                                        });
+
                                     }
 
                                     // ...

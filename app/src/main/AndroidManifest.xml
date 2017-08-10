@@ -23,28 +23,27 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.jeomix.android.gpstracker.files.MainActivity">
-
-        </activity>
+        <activity android:name=".files.MainActivity" />
         <activity
-            android:name="com.jeomix.android.gpstracker.MainLogin"
+            android:name=".MainLogin"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service
-            android:name="com.jeomix.android.gpstracker.files.LocationUpdatesService"
+            android:name=".files.LocationUpdatesService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name="com.jeomix.android.gpstracker.files.SplashScreen">
+        <activity android:name=".files.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".files.Main2Activity" />
+        <activity android:name=".files.ErrorActivity"></activity>
     </application>
 
 </manifest>

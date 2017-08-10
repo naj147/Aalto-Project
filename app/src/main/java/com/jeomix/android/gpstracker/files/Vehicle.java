@@ -8,9 +8,12 @@ public class Vehicle extends VehicleInterface{
 
     //License Plate Number
     String lpn;
+
     //Vehicule Identification Number
     String vin;
 
+    public Vehicle() {
+    }
 
     public Vehicle(VehicleType type, String vin) {
         this.type = type;
