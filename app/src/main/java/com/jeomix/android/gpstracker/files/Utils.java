@@ -22,6 +22,7 @@ import android.location.Location;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Patterns;
+import android.widget.EditText;
 
 import com.jeomix.android.gpstracker.R;
 
@@ -31,7 +32,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-class Utils {
+public class Utils {
+
 
     public final static boolean isValidEmail(CharSequence target) {
         return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
@@ -41,6 +43,34 @@ class Utils {
         return !TextUtils.isEmpty(target) && Patterns.PHONE.matcher(target).matches();
     }
 
+    public static String emailError(CharSequence emailSeq){
+        String emailString = emailSeq.toString().trim();
+        if(!Utils.isValidEmail(emailString))
+            return "Email is not well formated ";
+        return "";
+    }
+    public static  String passError(CharSequence passSeq){
+        String passString=passSeq.toString();
+        if(passString.length()<6)
+            return "Password has less than 6 Character ";
+        return "";
+    }
+    public static String passVer(CharSequence passSeq,CharSequence passConfSeq){
+        if(!passSeq.toString().equals(passConfSeq.toString()))
+            return "Password Confirmation Doesn't Match The First One Entered ";
+        return "";
+    }
+    public static String formValidation(EditText email, EditText pass , EditText passConf ){
+        String error = "";
+        error += emailError(email.getText());
+        error+= passError(pass.getText());
+        if(passConf != null){
+            error+= passError(passConf.getText());
+            error+= passVer(pass.getText(),passConf.getText());
+        }
+
+        return error;
+    }
 
     public static Long convertStringToTimestamp(String str_date) {
         try {

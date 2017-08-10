@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "412399782603",
+    "firebase_url": "https://aaltoproject-f348f.firebaseio.com",
+    "project_id": "aaltoproject-f348f",
+    "storage_bucket": "aaltoproject-f348f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412399782603:android:5715d00a79a8e1e9",
+        "android_client_info": {
+          "package_name": "com.jeomix.android.gpstracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412399782603-i206gj3c9sqinooj2qhqk9a7rnnd7cug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPZ8D3QyN5L14PFbhFpaqntfLTKu8AmAU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

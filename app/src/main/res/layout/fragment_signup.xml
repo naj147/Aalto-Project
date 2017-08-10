@@ -7,6 +7,7 @@
     tools:context="com.jeomix.android.gpstracker.login.SignUpFragment">
 
     <EditText
+        android:id="@+id/signupEmailInputText"
         android:layout_width="200dp"
         android:layout_height="56dp"
         android:layout_gravity="center_horizontal"
@@ -15,10 +16,12 @@
         android:background="@drawable/bubble"
         android:gravity="center_vertical"
         android:paddingStart="32dp"
-        android:text="Email"
-        android:paddingLeft="32dp" />
+        android:hint="@string/email"
+        android:paddingLeft="32dp"
+        android:inputType="textEmailAddress" />
 
     <EditText
+        android:id="@+id/signupPassInputText"
         android:layout_width="200dp"
         android:layout_height="56dp"
         android:layout_gravity="center_horizontal"
@@ -27,10 +30,12 @@
         android:gravity="center_vertical"
         android:textColor="#ffffff"
         android:paddingStart="32dp"
-        android:text="Password"
-        android:paddingLeft="32dp" />
+        android:hint="@string/password"
+        android:paddingLeft="32dp"
+        android:inputType="textPassword" />
 
     <EditText
+        android:id="@+id/signupPassConfInputText"
         android:layout_width="200dp"
         android:layout_height="56dp"
         android:layout_gravity="center_horizontal"
@@ -39,8 +44,9 @@
         android:gravity="center_vertical"
         android:textColor="#ffffff"
         android:paddingStart="32dp"
-        android:text="Confirm Password"
-        android:paddingLeft="32dp" />
+        android:hint="@string/confirm_password"
+        android:paddingLeft="32dp"
+        android:inputType="textPassword"/>
 
         <io.saeid.fabloading.LoadingView
             android:layout_marginTop="16dp"
