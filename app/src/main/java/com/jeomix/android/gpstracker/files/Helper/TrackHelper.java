@@ -10,15 +10,14 @@ import com.jeomix.android.gpstracker.files.Tracks;
 
 public class TrackHelper {
     public static Tracks currentTrack;
-
     public static boolean isItNew(Location l){
         if(currentTrack!=null){
             if(currentTrack.getTracks()==null || currentTrack.getTracks().size()==0){
                 return true;
             }
-            Location begin=currentTrack.getLocation(0);
-            if(begin!=null){
-                if(l.getLatitude()==begin.getLatitude() && l.getLongitude()==begin.getLongitude())
+            Location comparable=currentTrack.getLocation(currentTrack.getTracks().size()-1);
+            if(comparable!=null){
+                if(l.getLatitude()==comparable.getLatitude() && l.getLongitude()==comparable.getLongitude())
                     return false;
             }
         }

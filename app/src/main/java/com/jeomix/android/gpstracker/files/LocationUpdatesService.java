@@ -27,7 +27,11 @@ import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.jeomix.android.gpstracker.R;
+import com.jeomix.android.gpstracker.files.Helper.TrackHelper;
+import com.jeomix.android.gpstracker.files.Helper.UserHelper;
 
 /**
  * A bound and started service that is promoted to a foreground service when location updates have
@@ -48,6 +52,8 @@ public class LocationUpdatesService extends Service {
 
     private static final String PACKAGE_NAME =
             "com.jeomix.android.gpstracker.files";
+
+
 
     private static final String TAG = LocationUpdatesService.class.getSimpleName();
 
@@ -110,12 +116,16 @@ public class LocationUpdatesService extends Service {
      * The current location.
      */
     private Location mLocation;
+    FirebaseDatabase database ;
+    DatabaseReference myRef;
 
     public LocationUpdatesService() {
     }
 
     @Override
     public void onCreate() {
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("Tracks");
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         mLocationCallback = new LocationCallback() {
@@ -123,6 +133,7 @@ public class LocationUpdatesService extends Service {
             @Override
             public void onLocationResult(LocationResult locationResult) {
                 super.onLocationResult(locationResult);
+
                 onNewLocation(locationResult.getLastLocation());
             }
         };
@@ -295,6 +306,24 @@ public class LocationUpdatesService extends Service {
         if (serviceIsRunningInForeground(this)) {
             mNotificationManager.notify(NOTIFICATION_ID, getNotification());
         }
+        //Verify that Location isn't the same one that was sent before
+        if(TrackHelper.isItNew(location)){
+            if(TrackHelper.currentTrack==null){
+                TrackHelper.currentTrack=new Tracks();
+            }
+            TrackHelper.currentTrack.addLocaion(location);
+            myRef.child(UserHelper.getCurrentUser().getId()).child(String.valueOf(TrackHelper.currentTrack.getTrack(0).getTos())).setValue(location).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                        //Do something
+                    }
+                    else{
+                        //Reload it later
+                    }
+                }
+            });
+        }
     }
 
     /**
@@ -302,7 +331,7 @@ public class LocationUpdatesService extends Service {
      */
     private void createLocationRequest() {
         mLocationRequest = new LocationRequest();
-        
+
         //REMOVE THE METERS UPDATE TESTING PURPOSES
 //        mLocationRequest.setSmallestDisplacement(UPDATE_INTERVAL_IN_METERS);
         mLocationRequest.setInterval(UPDATE_INTERVAL_IN_MILLISECONDS);

@@ -14,34 +14,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="176fba22-028b-4dfc-b3c7-db7aac840d0f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_database_11_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/firebase_database_connection_11_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/ErrorActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Main2Activity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_error.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/tracks.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/MainLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/MainLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/UserHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/UserHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/User.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Vehicle.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Vehicle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleType.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/SignUpFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/SignUpFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/jack-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/jack-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleTrack.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleTrack.java" />
     </list>
     <ignored path="Aalto-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,14 +69,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocationUpdatesService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LocationUpdatesService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4095">
-              <caret line="304" column="8" selection-start-line="304" selection-start-column="8" selection-end-line="304" selection-end-column="8" />
+            <state relative-caret-position="425">
+              <caret line="314" column="113" selection-start-line="314" selection-start-column="113" selection-end-line="314" selection-end-column="113" />
               <folding>
-                <element signature="e#4383#4649#0" expanded="true" />
-                <element signature="e#4648#4649#0" expanded="true" />
+                <element signature="e#4780#5047#0" expanded="true" />
+                <element signature="e#5046#5047#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,8 +85,8 @@
       <file leaf-file-name="TrackHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,24 +97,26 @@
       <file leaf-file-name="Tracks.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding>
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#892#893#0" expanded="true" />
-                <element signature="e#953#954#0" expanded="true" />
-                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#891#892#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleTrack.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VehicleTrack.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleTrack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="165">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+              <folding>
+                <element signature="e#253#254#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2353,9 +2336,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Vehicle.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleTrack.java" />
       </list>
     </option>
   </component>
@@ -2878,7 +2862,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="24" width="1885" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.49157152" order="7" side_tool="false" content_ui="tabs" />
@@ -2894,8 +2878,8 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5084285" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.182708" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21968462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -3376,14 +3360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleTrack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/UserHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -3394,34 +3370,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="314" column="113" selection-start-line="314" selection-start-column="113" selection-end-line="314" selection-end-column="113" />
           <folding>
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#4780#5047#0" expanded="true" />
+            <element signature="e#5046#5047#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4095">
-          <caret line="304" column="8" selection-start-line="304" selection-start-column="8" selection-end-line="304" selection-end-column="8" />
+        <state relative-caret-position="135">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
           <folding>
-            <element signature="e#4383#4649#0" expanded="true" />
-            <element signature="e#4648#4649#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleTrack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="e#253#254#0" expanded="true" />
           </folding>
         </state>
       </provider>

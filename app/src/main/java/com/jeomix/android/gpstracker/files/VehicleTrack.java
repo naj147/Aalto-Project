@@ -10,7 +10,7 @@ public class VehicleTrack {
     Location location;
 
     public VehicleTrack(Location location) {
-        this.location = location;
+       setLocation(location);
     }
 
     public Location getLocation() {

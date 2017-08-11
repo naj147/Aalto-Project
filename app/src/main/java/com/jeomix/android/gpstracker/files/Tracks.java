@@ -9,7 +9,6 @@ import java.util.ArrayList;
  */
 
 public class Tracks {
-
     private ArrayList<VehicleTrack> tracks;
    public void addTrack(VehicleTrack vt){
        if(tracks==null)
@@ -40,6 +39,11 @@ public class Tracks {
         this.tracks = tracks;
     }
 
+    public VehicleTrack getLastTrack(){
+        if(tracks!=null)
+        return tracks.get(tracks.size()-1);
+        return null;
+    }
 
 
 
