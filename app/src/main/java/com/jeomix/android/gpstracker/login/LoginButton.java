@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
@@ -95,10 +96,10 @@ public class LoginButton  extends View {
         init();
     }
 
-    public LoginButton(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init();
-    }
+//    public LoginButton(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+//        super(context, attrs, defStyleAttr, defStyleRes);
+//        init();
+//    }
 
     private void init() {
         loginButtonPaint = new Paint();
@@ -190,6 +191,11 @@ public class LoginButton  extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        RectF rectF1 = new RectF(currentRight - getButtonHeight() / 2 + currentArcX, buttonTop, currentRight + getButtonHeight() / 2 - currentArcX, buttonBottom);
+        RectF rectF2 = new RectF(currentLeft - getButtonHeight() / 2 + currentArcX,
+                buttonTop,
+                currentLeft + getButtonHeight() / 2 - currentArcX,
+                buttonBottom);
         super.onDraw(canvas);
 
         if (isLogin) {
@@ -200,11 +206,8 @@ public class LoginButton  extends View {
 
         if (isLogin) {
             canvas.drawPath(loginButtonPath, loginButtonPaint);
-            canvas.drawArc(
-                    currentRight - getButtonHeight() / 2 + currentArcX,
-                    buttonTop,
-                    currentRight + getButtonHeight() / 2 - currentArcX,
-                    buttonBottom,
+
+            canvas.drawArc(rectF1,
                     0,
                     360,
                     false,
@@ -214,11 +217,8 @@ public class LoginButton  extends View {
             canvas.drawText("LOGIN", currentLoginX, currentLoginY, loginPaint);
         } else {
             canvas.drawPath(signUpButtonPath, signUpButtonPaint);
-            canvas.drawArc(
-                    currentLeft - getButtonHeight() / 2 + currentArcX,
-                    buttonTop,
-                    currentLeft + getButtonHeight() / 2 - currentArcX,
-                    buttonBottom,
+            canvas.drawArc(rectF2
+                    ,
                     0,
                     360,
                     false,

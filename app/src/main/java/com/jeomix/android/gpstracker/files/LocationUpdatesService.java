@@ -303,29 +303,34 @@ public class LocationUpdatesService extends Service {
         LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
         // Update notification content if running as a foreground service.
         //TODO REGISTER THE LOCATION IN THE DB
+        onNewLocationUpdateDB(location);
         if (serviceIsRunningInForeground(this)) {
             mNotificationManager.notify(NOTIFICATION_ID, getNotification());
         }
+
+    }
+
+    /*
+    * This Function Is Used To Register The Current Location Captured On The Db
+    * */
+
+    private void onNewLocationUpdateDB(Location location){
         //Verify that Location isn't the same one that was sent before
         if(TrackHelper.isItNew(location)){
             if(TrackHelper.currentTrack==null){
                 TrackHelper.currentTrack=new Tracks();
             }
             TrackHelper.currentTrack.addLocaion(location);
-            myRef.child(UserHelper.getCurrentUser().getId()).child(String.valueOf(TrackHelper.currentTrack.getTrack(0).getTos())).setValue(location).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful()){
-                        //Do something
-                    }
-                    else{
-                        //Reload it later
-                    }
+            myRef.child(UserHelper.getCurrentUser().getId()).child(String.valueOf(TrackHelper.currentTrack.getTrack(0).getTos())).child(String.valueOf(TrackHelper.length())).setValue(location).addOnCompleteListener(task -> {
+                if(task.isSuccessful()){
+                    //Do something
+                }
+                else{
+                    //Reload it later
                 }
             });
         }
     }
-
     /**
      * Sets the location request parameters.
      */

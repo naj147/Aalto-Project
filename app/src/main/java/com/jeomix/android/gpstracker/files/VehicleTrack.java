@@ -31,4 +31,5 @@ public class VehicleTrack {
     public void setTos(long tos) {
         this.tos = tos;
     }
+
 }

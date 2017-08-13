@@ -22,9 +22,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.jeomix.android.gpstracker.R;
 import com.jeomix.android.gpstracker.files.ErrorActivity;
+import com.jeomix.android.gpstracker.files.FragmentPagerSupport;
 import com.jeomix.android.gpstracker.files.Helper.UserHelper;
 import com.jeomix.android.gpstracker.files.Main2Activity;
 import com.jeomix.android.gpstracker.files.MainActivity;
+import com.jeomix.android.gpstracker.files.MapsActivity;
 import com.jeomix.android.gpstracker.files.User;
 import com.jeomix.android.gpstracker.files.Utils;
 
@@ -63,7 +65,8 @@ public class LoginFragment extends Fragment {
                             //Retrieving User From DB
                                 User user = dataSnapshot.getValue(User.class);
                                 UserHelper.setCurrentUser(user);
-                                router(user.getIsAdmin());
+                            assert user != null;
+                            router(user.getIsAdmin());
 
                         }
 
@@ -180,7 +183,7 @@ public class LoginFragment extends Fragment {
                     break;
                 case 2:
                     //admin
-                    intent = new Intent(getContext(), Main2Activity.class);
+                    intent = new Intent(getContext(), FragmentPagerSupport.class);
                     break;
                 case 3:
                     //banned

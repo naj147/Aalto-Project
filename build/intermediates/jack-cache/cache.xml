@@ -44,6 +44,18 @@
         <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-6da57a9959e7e85d5965ea34568aacf5414becc3.jar" />
     </item>
     <item
+        jar="/home/jeomix/.android/build-cache/fa4a20cc1e4f485e7422a33de7c97566a3de9ceb/output/jars/classes.jar"
+        revision="25.0.3"
+        sha1="fcae52a60bc07924d370b4d376116cd8f8581f54">
+        <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-fea81ad4e7ffdeec988f58d1d1d0eeb2ed8f3612.jar" />
+    </item>
+    <item
+        jar="/home/jeomix/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        revision="25.0.3"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/glide-3.7.0-3d80b726c8d05e03aa573a00cedfeca4229c96fe.jar" />
+    </item>
+    <item
         jar="/home/jeomix/.android/build-cache/e247e8265b4d8567818196649afb1f78a9e97166/output/jars/classes.jar"
         revision="25.0.3"
         sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
@@ -200,6 +212,12 @@
         <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-fbec1d73c3579abfa8acd76b3857596b98a3e59a.jar" />
     </item>
     <item
+        jar="/home/jeomix/.android/build-cache/cfa2483d7f7869cda857a27ee3ad5a91378e2826/output/jars/classes.jar"
+        revision="25.0.3"
+        sha1="d237556caead5b93d97e18a071059a2c0045978e">
+        <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-9ae481e0aa39d720658a1c7d3469056a9508ebbe.jar" />
+    </item>
+    <item
         jar="/home/jeomix/.android/build-cache/e5f0721e6a6f0bac7e30f444e1479e00d343d538/output/jars/classes.jar"
         revision="25.0.3"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
@@ -218,6 +236,12 @@
         <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-6901fbbb80663e68d6883e15c1fc5b8bc91a7d2a.jar" />
     </item>
     <item
+        jar="/home/jeomix/.android/build-cache/f67f6f75cb267a37a947b92406aec4cf9e731a80/output/jars/classes.jar"
+        revision="25.0.3"
+        sha1="bc853652fcf47d99e37ab1362c228d1ef90a2a1f">
+        <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-7db83e26ad0f149ad50716c5f2234aabfb7a4b81.jar" />
+    </item>
+    <item
         jar="/home/jeomix/.android/build-cache/01d9b7ecb5536a4eb46b811a4b76610bd798eb7e/output/jars/classes.jar"
         revision="25.0.3"
         sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
@@ -228,6 +252,12 @@
         revision="25.0.3"
         sha1="6a2bcb61342d09fe9acf55c9daf63961c8866cc0">
         <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-df1bd6b6921b5a0de80b824329308d23de03310f.jar" />
+    </item>
+    <item
+        jar="/home/jeomix/.android/build-cache/a57815c572e720b300511e695d6f82b117b6dfc7/output/jars/classes.jar"
+        revision="25.0.3"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-36e3bb1d6bc4f49ebfe0fac499128332fb0a6166.jar" />
     </item>
 
 </items>

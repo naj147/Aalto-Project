@@ -23,4 +23,10 @@ public class TrackHelper {
         }
         return true;
     }
+    public static int length(){
+        if(currentTrack==null || currentTrack.getTracks()==null)
+            return 0;
+        else
+            return currentTrack.getTracks().size();
+    }
 }
