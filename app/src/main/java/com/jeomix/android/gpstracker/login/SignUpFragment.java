@@ -34,7 +34,7 @@ import io.saeid.fabloading.LoadingView;
 
 public class SignUpFragment extends Fragment {
     private static final String TAG ="SignUpFragment" ;
-     int choice=0;
+     int choice=1;
     EditText email,pass,passConf;
     private FirebaseAuth mAuth;
     FirebaseDatabase mDatabase;

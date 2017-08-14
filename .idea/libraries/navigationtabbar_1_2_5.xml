@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="navigationtabbar-1.2.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/d63edb72abf5e7bfc3e231dcfe85d2ee0274415d/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/d63edb72abf5e7bfc3e231dcfe85d2ee0274415d/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

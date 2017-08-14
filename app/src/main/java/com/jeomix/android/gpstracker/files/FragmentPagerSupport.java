@@ -1,17 +1,23 @@
 package com.jeomix.android.gpstracker.files;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 
 import com.jeomix.android.gpstracker.R;
+
+import java.util.ArrayList;
+
+import devlight.io.library.ntb.NavigationTabBar;
 
 /**
  * Created by jeomix on 8/12/17.
@@ -109,7 +115,67 @@ import com.jeomix.android.gpstracker.R;
                 }
             });
 
+            final NavigationTabBar navigationTabBar = (NavigationTabBar) findViewById(R.id.ntb);
+            final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
+            models.add(
+                    new NavigationTabBar.Model.Builder(
+                            ContextCompat.getDrawable(this,R.drawable.car_top),
+                            Color.parseColor("#df5a55")
+                    ).title("Map")
+                            .badgeTitle("20")
+                            .build()
+            );
+            models.add(
+                    new NavigationTabBar.Model.Builder(
+                            ContextCompat.getDrawable(this,R.drawable.car_top),
+                            Color.parseColor("#76afcf")
+                    ).title("VEH")
+                            .badgeTitle("8")
+                            .build()
+            );
+            models.add(
+                    new NavigationTabBar.Model.Builder(
+                            ContextCompat.getDrawable(this,R.drawable.car_top),
+                            Color.parseColor("#72d3b4")
+                    ).title("Users")
+                            .badgeTitle("NTB")
+                            .build()
+            );
+            navigationTabBar.setModels(models);
+            navigationTabBar.setViewPager(mPager);
+            navigationTabBar.setTitleMode(NavigationTabBar.TitleMode.ACTIVE);
+            navigationTabBar.setBadgeGravity(NavigationTabBar.BadgeGravity.BOTTOM);
+            navigationTabBar.setBadgePosition(NavigationTabBar.BadgePosition.CENTER);
+            navigationTabBar.setIsBadged(true);
+            navigationTabBar.setIsTitled(true);
+            navigationTabBar.setIsTinted(true);
+            navigationTabBar.setIsBadgeUseTypeface(true);
+            navigationTabBar.setBadgeBgColor(Color.RED);
+            navigationTabBar.setBadgeTitleColor(Color.WHITE);
+            navigationTabBar.setIsSwiped(true);
+            navigationTabBar.setBgColor(Color.BLACK);
+            navigationTabBar.setBadgeSize(10);
+            navigationTabBar.setTitleSize(10);
+            navigationTabBar.setIconSizeFraction(1/2);
+/**navigationTabBar.setModels(models);
+ navigationTabBar.setViewPager(viewPager, 2);
 
+ navigationTabBar.setTitleMode(NavigationTabBar.TitleMode.ACTIVE);
+ navigationTabBar.setBadgeGravity(NavigationTabBar.BadgeGravity.BOTTOM);
+ navigationTabBar.setBadgePosition(NavigationTabBar.BadgePosition.CENTER);
+ navigationTabBar.setTypeface("fonts/custom_font.ttf");
+ navigationTabBar.setIsBadged(true);
+ navigationTabBar.setIsTitled(true);
+ navigationTabBar.setIsTinted(true);
+ navigationTabBar.setIsBadgeUseTypeface(true);
+ navigationTabBar.setBadgeBgColor(Color.RED);
+ navigationTabBar.setBadgeTitleColor(Color.WHITE);
+ navigationTabBar.setIsSwiped(true);
+ navigationTabBar.setBgColor(Color.BLACK);
+ navigationTabBar.setBadgeSize(10);
+ navigationTabBar.setTitleSize(10);
+ navigationTabBar.setIconSizeFraction(0.5);
+ * */
 
             // Watch for button clicks.
 //        Button button = (Button)findViewById(R.id.goto_first);

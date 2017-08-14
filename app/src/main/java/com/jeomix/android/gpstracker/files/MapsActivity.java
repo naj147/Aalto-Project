@@ -68,6 +68,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .findFragmentById(R.id.map);
             mapFragment.getMapAsync(this);
 
+
         }
 
     }
@@ -153,6 +154,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         };
         myRef.addValueEventListener(vel);
     }
-
 
 }

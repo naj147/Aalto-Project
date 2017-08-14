@@ -126,6 +126,7 @@
     <orderEntry type="library" exported="" name="play-services-tasks-11.0.4" level="project" />
     <orderEntry type="library" exported="" name="butterknife-8.8.0" level="project" />
     <orderEntry type="library" exported="" name="firebase-common-11.0.4" level="project" />
+    <orderEntry type="library" exported="" name="navigationtabbar-1.2.5" level="project" />
     <orderEntry type="library" exported="" name="constraint-layout-1.0.2" level="project" />
     <orderEntry type="library" exported="" name="boommenu-2.1.0" level="project" />
     <orderEntry type="library" exported="" name="firebase-iid-11.0.4" level="project" />

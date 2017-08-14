@@ -1,5 +1,6 @@
 package com.jeomix.android.gpstracker.files;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -26,8 +27,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.jeomix.android.gpstracker.R;
 import com.jeomix.android.gpstracker.files.Helper.UserHelper;
 
@@ -42,6 +50,11 @@ public class Fragment_Users extends Fragment {
     private ImageView emptyView;
     private View view;
     private Paint p = new Paint();
+    FirebaseDatabase database;
+    DatabaseReference myUsersRef;
+    ValueEventListener vel;
+    boolean isUser=true;
+    DatabaseReference myVehRef;
     private AlertDialog.Builder alertDialog;
     private EditText et_country;
     private int edit_position;
@@ -53,17 +66,89 @@ public class Fragment_Users extends Fragment {
         Glide.with(getContext()).load(R.drawable.ic_empty_set).placeholder(R.drawable.ic_empty_set).into(emptyView);
         emptyView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         recyclerView = (RecyclerView)view.findViewById(R.id.historyRecycleView);
+        database= FirebaseDatabase.getInstance();
         setupRecycleView(recyclerView,getContext());
         return view;
     }
     public void setupRecycleView(RecyclerView recyclerView, Context context){
-        Users_Array users_array = new Users_Array(UserHelper.getCurrentUser());
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        recyclerView.setAdapter(new MyRecycle_Adapter(users_array));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        adapter= (MyRecycle_Adapter) recyclerView.getAdapter();
+        adapter= new MyRecycle_Adapter();
+        recyclerView.setAdapter(adapter);
+        if(!isUser){
+            adapter.switch_loading();
+            refreshVehicles();
+        }else
+            refreshUsers();
+
+
+
         initSwipe();
         isImageEmpty();
+    }
+    public void switch_loading(){
+        isUser=!isUser;
+    }
+
+    public void refreshVehicles(){
+        myVehRef = database.getReference("vehicules");
+        vel=myVehRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot data : dataSnapshot.getChildren()){
+                    Vehicle v =data.getValue(Vehicle.class);
+                    adapter.addVehicle(v);
+                    //TODO Calculate Number of vehicules for Navigationdrawer
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        myVehRef.addValueEventListener(vel);
+    }
+
+    public void refreshUsers(){
+        myUsersRef= database.getReference("users");
+        DatabaseReference myVehRef = database.getReference("vehicules");
+//        ProgressDialog progressDialog = new ProgressDialog(getContext());
+//        progressDialog.setIndeterminate(true);
+//        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+//        progressDialog.setTitle("Loading Data From DB");
+//        progressDialog.setMessage("Please Wait Loading Content...");
+//        progressDialog.show();
+         vel= myUsersRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot data : dataSnapshot.getChildren()){
+                    User user=data.getValue(User.class);
+                    myVehRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Users_Array user_array = new Users_Array(user);
+                            if(user!=null && dataSnapshot.child(user.getId()).exists()){
+                                Vehicle v= dataSnapshot.child(user.getId()).getValue(Vehicle.class);
+                                user_array.setVehicle(v);
+                            }
+                            adapter.addUserArray(user_array);
+                            isImageEmpty();
+                        }
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+                }
+//                progressDialog.dismiss();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+        myUsersRef.addValueEventListener(vel);
     }
 
     public void isImageEmpty(){
@@ -79,6 +164,85 @@ public class Fragment_Users extends Fragment {
 //            EventBus.getDefault().postSticky(n);
 //    }
 
+    /*
+       * A function Used to retrieve the Action appropiate to the card user role
+       * */
+    public void swip_action(Users_Array users_array,boolean isLeft){
+        User user= users_array.getUser();
+        Vehicle v= users_array.getVehicle();
+        if(user!=null){
+           if(isLeft){
+               switch(user.getIsAdmin()){
+                   case 0:
+                        adapter.ban(user);
+                       break;
+                   case 2:
+                       adapter.ban(user);
+                       break;
+                   case 1:
+                       adapter.ban(user);
+                       break;
+                   case 3:
+                       adapter.unBan(user,v);
+                       break;
+               }
+           }else {
+               switch (user.getIsAdmin()) {
+                   case 0:
+                       adapter.track(v);
+                       break;
+                   case 2:
+                       adapter.ban(user);
+                       break;
+                   case 1:
+                       adapter.acceptAdmin(user);
+                       break;
+                   case 3:
+                       adapter.unBan(user, v);
+                       break;
+               }
+           }
+        }
+
+
+
+
+    }
+
+    /*
+    * A function Used to retrieve the Image appropiate to the perpetuated action
+    * */
+    public Bitmap getSwipeImage(Users_Array users_array,Boolean isLeft) {
+        User user= users_array.getUser();
+        int imgRes=R.drawable.bubble;
+        if (isLeft) {
+            switch (user.getIsAdmin()) {
+                case 0:case 2 :case 1:
+                    imgRes=R.drawable.ban;
+                    break;
+                case 3:
+                   imgRes=R.drawable.unchecked;
+                    break;
+            }
+        } else {
+            switch (user.getIsAdmin()) {
+                case 0:
+                    imgRes=R.drawable.track;
+                    break;
+                case 2:
+                    imgRes=R.drawable.ban;
+                    break;
+                case 1:
+                    imgRes=R.drawable.accept_pending;
+                    break;
+                case 3:
+                    imgRes=R.drawable.unchecked;
+                    break;
+            }
+        }
+       return getBitmapFromDrawable(getContext(), imgRes);
+    }
+
     private void initSwipe(){
         ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
@@ -92,16 +256,10 @@ public class Fragment_Users extends Fragment {
 
                 if (direction == ItemTouchHelper.LEFT){
                     Log.v("Item"+position+" :", "SWIPED LEFT");
-                    adapter.removeItem(position);
+                    swip_action(adapter.getUserArray(position),true);
                     isImageEmpty();
                 } else {
-//                    removeView();
-//                    edit_position = position;
-//                    alertDialog.setTitle("Edit Country");
-//                    et_country.setText(countries.get(position));
-//                    alertDialog.show();
-//                    eventStarter(position);
-                    adapter.notifyDataSetChanged();
+                    swip_action(adapter.getUserArray(position),false);
                     Log.v("Item "+position+" :", "SWIPED RIGHT");
                 }
             }
@@ -114,7 +272,7 @@ public class Fragment_Users extends Fragment {
 
             @Override
             public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
-
+                Users_Array users_array = adapter.getUserArray(viewHolder.getAdapterPosition());
                 Bitmap icon;
                 if(actionState == ItemTouchHelper.ACTION_STATE_SWIPE & isCurrentlyActive){
 
@@ -123,21 +281,23 @@ public class Fragment_Users extends Fragment {
                     float width = height / 3;
 
                     if(dX > 0){
-                        p.setColor(Color.parseColor("#388E3C"));
+
+
+                        icon = getSwipeImage(users_array,false);
+                        p.setColor(Color.parseColor("#FFF9C4"));
+
                         RectF background = new RectF((float) itemView.getLeft(), (float) itemView.getTop(), dX,(float) itemView.getBottom());
                         c.drawRect(background,p);
-                        icon = getBitmapFromDrawable(getContext(), R.drawable.ic_cancel);
                         // icon.isRecycled();
                         RectF icon_dest = new RectF((float) itemView.getLeft() + width ,(float) itemView.getTop() + width,(float) itemView.getLeft()+ 2*width,(float)itemView.getBottom() - width);
-
-
                         c.drawBitmap(icon,null,icon_dest,p);
 
                     } else {
-                        p.setColor(Color.parseColor("#C0C0B8"));
+                        p.setColor(Color.parseColor("#FFFFFF"));
+                        icon = getSwipeImage(users_array,true);
+
                         RectF background = new RectF((float) itemView.getRight() + dX, (float) itemView.getTop(),(float) itemView.getRight(), (float) itemView.getBottom());
                         c.drawRect(background,p);
-                        icon = getBitmapFromDrawable(getContext(), R.drawable.ic_done);
                         RectF icon_dest = new RectF((float) itemView.getRight() - 2*width ,(float) itemView.getTop() + width,(float) itemView.getRight() - width,(float)itemView.getBottom() - width);
                         icon.isRecycled();
                         c.drawBitmap(icon,null,icon_dest,p);
@@ -177,9 +337,17 @@ public class Fragment_Users extends Fragment {
     }
     @Override
     public void onStop() {
-
+        if(myUsersRef!=null){
+            if(vel!=null)
+            myUsersRef.removeEventListener(vel);
+        }
+        if(myVehRef!=null){
+            if(vel!=null)
+                myVehRef.removeEventListener(vel);
+        }
         super.onStop();
     }
+
 
 //    private void initDialog(){
 //        alertDialog = new AlertDialog.Builder(this);

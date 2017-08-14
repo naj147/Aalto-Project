@@ -87,4 +87,19 @@ public class User {
         this.token = token;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj==null)
+            return false;
+        if( getClass()!=obj.getClass())
+            return false;
+        if(this==obj)
+            return true;
+        User u= (User) obj;
+        if(!this.id.equals(u.getId()))
+            return  false;
+        return true;
+
+    }
+
 }
