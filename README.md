@@ -26,25 +26,28 @@ This is a fruit of 11 days straight of work including analyzing, programming and
 * Gms Library Used : the latest 11.04 (includes Firebase 11.04)
 * Java version 8 Update 25
 
-####Testing Environment 
-	* Nexus 5x 7.1
-    * Nexus 5 Emulator 5.0 Lollypop
-    * Accent Speed-Y2 6.0 Marshmallow
-    * Galaxy Note 3 5.1 Lollypop
+####Testing Environment   
+* Nexus 5x 7.1  
+* Nexus 5 Emulator 5.0 Lollypop  
+* Accent Speed-Y2 6.0 Marshmallow  
+* Galaxy Note 3 5.1 Lollypop  
     
 ####Installation  
-	Just be sure to respect the environment mentioned above and download the repos on your pc   
-    and then import it using Android studio then clean the project and rebuild it.  
-    In case you face some errors be sure to invalidate the cache and repeat the process previously mentioned.  
+
+	Just be sure to respect the environment mentioned above and download the repos on your pc    
+    and then import it using Android studio then clean the project and rebuild it.   
+    In case you face some errors be sure to invalidate the cache and repeat the process previously mentioned.   
     
 ####Note
 
-    I made sure the hard parts of the code are well commented and well structured so it's easy for you guys to follow it. 
+    I made sure the hard parts of the code are well commented and well structured    
+    so it's easy for you guys to follow it. 
 
 ####Video Demo  
 
 
-	This video showcases all the fonctionalities of the app, the different actors and also show a ** real life ** demonstration
+	This video showcases all the fonctionalities of the app, the different actors  
+	and also show a ** real life ** demonstration
 
 
 
@@ -52,7 +55,8 @@ This is a fruit of 11 days straight of work including analyzing, programming and
 ------------------------------
     !["Aalto Play"](http://imgur.com/a/3t1MI) 
     
-####End Note
+*####End Note*  
+
     I hope you guys have liked the application and looking forward for your feedback. 
 
 
