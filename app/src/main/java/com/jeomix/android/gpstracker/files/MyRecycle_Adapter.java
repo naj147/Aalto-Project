@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.jeomix.android.gpstracker.R;
+import com.jeomix.android.gpstracker.files.EventBusClasses.LocationEvents;
 import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
 import com.nightonke.boommenu.BoomButtons.HamButton;
 import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
@@ -26,6 +27,8 @@ import com.nightonke.boommenu.BoomMenuButton;
 import com.nightonke.boommenu.Piece.BoomPiece;
 import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 import com.nightonke.boommenu.Util;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -67,12 +70,14 @@ public class MyRecycle_Adapter extends RecyclerView.Adapter<MyRecycle_Adapter.My
                         holder.labelTextView.setText(v.getLabel());
                         holder.labelTextView.setTextColor(ContextCompat.getColor(holder.itemView.getContext(),R.color.material_blue_500));
                         holder.descriptionTextView.setText(v.getVin());
+                        holder.bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_2);
+                        holder.bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_2);
                         HamButton.Builder builder1 = new HamButton.Builder()
                                 .normalImageRes(R.drawable.track)
                                 .normalText("Track")
                                 .subNormalText("Track this vehicle in real time") .rippleEffect(true).listener(i -> {
                                     //TODO Add The tracking functionnality
-                                    track(v);
+                                    track(v,true);
                                 });
                         HamButton.Builder builder2 = new HamButton.Builder()
                                 .normalImageRes(R.drawable.ban)
@@ -91,6 +96,8 @@ public class MyRecycle_Adapter extends RecyclerView.Adapter<MyRecycle_Adapter.My
                     holder.labelTextView.setText(PENDING_ADMIN);
                     holder.labelTextView.setTextColor(ContextCompat.getColor(holder.itemView.getContext(),R.color.cold));
                     holder.descriptionTextView.setText(user.getEmail());
+                    holder.bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_2);
+                    holder.bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_2);
                     HamButton.Builder builder4 = new HamButton.Builder()
                             .normalImageRes(R.drawable.ban)
                             .normalText("Ban")
@@ -154,11 +161,14 @@ public class MyRecycle_Adapter extends RecyclerView.Adapter<MyRecycle_Adapter.My
                 holder.labelTextView.setText(v.getLabel());
                 holder.labelTextView.setTextColor(ContextCompat.getColor(holder.itemView.getContext(),R.color.material_blue_500));
                 holder.descriptionTextView.setText(v.getVin());
+                holder.bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_2);
+                holder.bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_2);
                 HamButton.Builder builder1= new HamButton.Builder()
                         .normalImageRes(R.drawable.track)
                         .normalText("Track")
                         .subNormalText("Track This vehicle") .rippleEffect(true).listener(i -> {
                             //TODO Add The tracking functionnality
+                            track(v,true);
                         });
                 HamButton.Builder builder2= new HamButton.Builder()
                             .normalImageRes(R.drawable.untrack)
@@ -167,6 +177,7 @@ public class MyRecycle_Adapter extends RecyclerView.Adapter<MyRecycle_Adapter.My
                             @Override
                             public void onBoomButtonClick(int i) {
                                 //TODO Add The untracking functionnality
+                                track(v,false);
                             }
                         });
                 holder.bmb.addBuilder(builder1);
@@ -175,8 +186,9 @@ public class MyRecycle_Adapter extends RecyclerView.Adapter<MyRecycle_Adapter.My
         }
     }
 
-    public void track(Vehicle v){
-
+    public void track(Vehicle v,boolean istrack){
+        EventBus.getDefault().post(new LocationEvents(v,istrack));
+        notifyDataSetChanged();
     }
     public void ban(User user){
         int BAN = 3;
@@ -226,10 +238,13 @@ public class MyRecycle_Adapter extends RecyclerView.Adapter<MyRecycle_Adapter.My
         return R.drawable.attention;
     }
     public void updateUser(User user){
+
         int i=getUserIndex(user);
         if(i!=-1){
+            Users_Array usersArray= getUserArray(i);
+            usersArray.setUser(user);
             removeItem(i);
-            addUser(user);
+            addUserArray(usersArray);
         }
         notifyDataSetChanged();
         Log.i("myrecycler","i size is" + i);
@@ -262,7 +277,6 @@ public class MyRecycle_Adapter extends RecyclerView.Adapter<MyRecycle_Adapter.My
             data = new ArrayList<>();
             data.add(users_array);
         }
-
         notifyItemInserted(data.size());
     }
 

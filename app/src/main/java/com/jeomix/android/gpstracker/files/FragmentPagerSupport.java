@@ -14,6 +14,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 
 import com.jeomix.android.gpstracker.R;
+import com.jeomix.android.gpstracker.files.EventBusClasses.LocationEvents;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 
@@ -31,6 +36,7 @@ import devlight.io.library.ntb.NavigationTabBar;
         MyAdapter mAdapter;
         TabLayout tabLayout;
         NonSwipeableViewPager mPager;
+        public NavigationTabBar navigationTabBar=null;
 
 //        @Subscribe(threadMode = ThreadMode.MAIN)
 //        public void onResult_Array(Result_Array event) {
@@ -59,17 +65,25 @@ import devlight.io.library.ntb.NavigationTabBar;
 //            }, 300);
 //
 //        }
-
+@Subscribe(threadMode = ThreadMode.MAIN)
+public void onLocationEvents(LocationEvents locationEvents){
+   mPager.setCurrentItem(0,true);
+}
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onBoolean(Boolean event){
+        if(event)
+        mPager.setCurrentItem(1,true);
+    }
         @Override
         protected void onStop() {
-//            EventBus.getDefault().unregister(this);
+            EventBus.getDefault().unregister(this);
             super.onStop();
 
         }
 
         @Override
         protected void onStart() {
-//            EventBus.getDefault().register(this);
+            EventBus.getDefault().register(this);
             super.onStart();
 
         }
@@ -84,7 +98,7 @@ import devlight.io.library.ntb.NavigationTabBar;
 
             mPager = (NonSwipeableViewPager)findViewById(R.id.pager);
             mPager.setAdapter(mAdapter);
-            mPager.setOffscreenPageLimit(2);
+            mPager.setOffscreenPageLimit(3);
         /*    mpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
         @Override
@@ -115,11 +129,11 @@ import devlight.io.library.ntb.NavigationTabBar;
                 }
             });
 
-            final NavigationTabBar navigationTabBar = (NavigationTabBar) findViewById(R.id.ntb);
+            navigationTabBar = (NavigationTabBar) findViewById(R.id.ntb);
             final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
             models.add(
                     new NavigationTabBar.Model.Builder(
-                            ContextCompat.getDrawable(this,R.drawable.car_top),
+                            ContextCompat.getDrawable(this,R.drawable.nav_marker),
                             Color.parseColor("#df5a55")
                     ).title("Map")
                             .badgeTitle("20")
@@ -127,36 +141,55 @@ import devlight.io.library.ntb.NavigationTabBar;
             );
             models.add(
                     new NavigationTabBar.Model.Builder(
-                            ContextCompat.getDrawable(this,R.drawable.car_top),
+                            ContextCompat.getDrawable(this,R.drawable.nav_car),
                             Color.parseColor("#76afcf")
-                    ).title("VEH")
+                    ).title("Vehicles")
                             .badgeTitle("8")
                             .build()
             );
             models.add(
                     new NavigationTabBar.Model.Builder(
-                            ContextCompat.getDrawable(this,R.drawable.car_top),
+                            ContextCompat.getDrawable(this,R.drawable.nav_user),
                             Color.parseColor("#72d3b4")
                     ).title("Users")
                             .badgeTitle("NTB")
                             .build()
             );
             navigationTabBar.setModels(models);
-            navigationTabBar.setViewPager(mPager);
-            navigationTabBar.setTitleMode(NavigationTabBar.TitleMode.ACTIVE);
-            navigationTabBar.setBadgeGravity(NavigationTabBar.BadgeGravity.BOTTOM);
-            navigationTabBar.setBadgePosition(NavigationTabBar.BadgePosition.CENTER);
-            navigationTabBar.setIsBadged(true);
-            navigationTabBar.setIsTitled(true);
-            navigationTabBar.setIsTinted(true);
-            navigationTabBar.setIsBadgeUseTypeface(true);
-            navigationTabBar.setBadgeBgColor(Color.RED);
-            navigationTabBar.setBadgeTitleColor(Color.WHITE);
-            navigationTabBar.setIsSwiped(true);
-            navigationTabBar.setBgColor(Color.BLACK);
-            navigationTabBar.setBadgeSize(10);
-            navigationTabBar.setTitleSize(10);
-            navigationTabBar.setIconSizeFraction(1/2);
+            navigationTabBar.setViewPager(mPager,1);
+            navigationTabBar.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                @Override
+                public void onPageScrolled(final int position, final float positionOffset, final int positionOffsetPixels) {
+
+                }
+
+                @Override
+                public void onPageSelected(final int position) {
+                    navigationTabBar.getModels().get(position).hideBadge();
+                    mPager.setCurrentItem(position);
+                }
+
+                @Override
+                public void onPageScrollStateChanged(final int state) {
+
+                }
+            });
+
+
+//            navigationTabBar.setTitleMode(NavigationTabBar.TitleMode.ACTIVE);
+//            navigationTabBar.setBadgeGravity(NavigationTabBar.BadgeGravity.BOTTOM);
+//            navigationTabBar.setBadgePosition(NavigationTabBar.BadgePosition.CENTER);
+//            navigationTabBar.setIsBadged(true);
+//            navigationTabBar.setIsTitled(true);
+//            navigationTabBar.setIsTinted(true);
+//            navigationTabBar.setIsBadgeUseTypeface(true);
+//            navigationTabBar.setBadgeBgColor(Color.RED);
+//            navigationTabBar.setBadgeTitleColor(Color.WHITE);
+//            navigationTabBar.setIsSwiped(true);
+//            navigationTabBar.setBgColor(Color.BLACK);
+//            navigationTabBar.setBadgeSize(10);
+//            navigationTabBar.setTitleSize(10);
+//            navigationTabBar.setIconSizeFraction(1/2);
 /**navigationTabBar.setModels(models);
  navigationTabBar.setViewPager(viewPager, 2);
 
@@ -229,10 +262,11 @@ import devlight.io.library.ntb.NavigationTabBar;
                 switch (position) {
 
                     case 0:
-//                        return new Fragment_swipes();
+                        return new MapsActivity();
                     case 1:
-//                        fr=new Fragment_results();
-//                        return fr;
+                        Fragment_Users fr = new Fragment_Users();
+                        fr.switch_loading();;
+                        return fr;
                     case 2:
 //                        fh=new Fragment_history();
 //                        return fh;

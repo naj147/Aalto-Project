@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +17,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.bumptech.glide.util.Util;
+import com.github.florent37.materialtextfield.MaterialTextField;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -41,7 +47,7 @@ public class LoginFragment extends Fragment {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private EditText email, password;
-
+    private String Error="";
     public LoginFragment() {
         // Required empty public constructor
     }
@@ -50,6 +56,7 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Error="";
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         setupLoginButton(view);
         mAuth = FirebaseAuth.getInstance();
@@ -109,6 +116,64 @@ public class LoginFragment extends Fragment {
     private void setupLoginButton(View view) {
         email = (EditText) view.findViewById(R.id.loginEmailInputText);
         password = (EditText) view.findViewById(R.id.loginPassInputText);
+        MaterialTextField emailTextField= (MaterialTextField) view.findViewById(R.id.loginEmailExpand);
+        MaterialTextField passTextField=(MaterialTextField) view.findViewById(R.id.loginPassExpand);
+        TextInputLayout emailTextInputLayout= (TextInputLayout) view.findViewById(R.id.loginEmailInputLayout);
+        TextInputLayout passTextInputLayout=(TextInputLayout) view.findViewById(R.id.loginPassInputLayout);
+        emailTextField.expand();
+        passTextField.expand();
+        email.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String string= s.toString();
+
+                if(string.trim().length()<=0){
+                    emailTextInputLayout.setErrorEnabled(true);
+                    Error="You need to enter an email";
+                    emailTextInputLayout.setError(Error);
+                }
+                else{
+                        Error=Utils.emailError(string);
+                        emailTextInputLayout.setError(Error);
+
+                }
+            }
+        });
+        password.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String string= s.toString();
+
+                if(string.trim().length()<=0){
+                    passTextInputLayout.setErrorEnabled(true);
+                    Error="You need to enter an password";
+                    passTextInputLayout.setError(Error);
+                }
+                else{
+                    Error=Utils.passError(string);
+                    passTextInputLayout.setError(Error);
+
+                }
+            }
+        });
         //TODO : EMAIL & PASS Verification , Email & pass input design, First Login Screen Design
 //        email.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -165,7 +230,12 @@ public class LoginFragment extends Fragment {
                                 // ...
                             });
                 }
-
+                else{
+                    if(Error.isEmpty())
+                        Error="Error Logging In";
+                    Snackbar.make(getView(),Error,Snackbar.LENGTH_SHORT).show();
+                    Error="";
+                }
 
             }
         });

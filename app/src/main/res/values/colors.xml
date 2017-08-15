@@ -13,11 +13,11 @@
 -->
 
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="text">#ffffff</color>
-    <color name="text_two">#94ffffff</color>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#F57C00</color>
+    <color name="colorAccent">#FFE0B2</color>
+    <color name="text">#212121</color>
+    <color name="text_two">#757575</color>
     <color name="green">#940ce61f</color>
     <color name="firey">#FF7124</color>
     <color name="black_button">#3C3C3C</color>

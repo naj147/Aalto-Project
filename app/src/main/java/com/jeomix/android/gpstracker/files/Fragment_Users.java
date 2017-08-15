@@ -80,9 +80,6 @@ public class Fragment_Users extends Fragment {
             refreshVehicles();
         }else
             refreshUsers();
-
-
-
         initSwipe();
         isImageEmpty();
     }
@@ -92,13 +89,32 @@ public class Fragment_Users extends Fragment {
 
     public void refreshVehicles(){
         myVehRef = database.getReference("vehicules");
+        DatabaseReference myUsersRef= database.getReference("users");
         vel=myVehRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
+                //TODO Calculate Number of vehicules for Navigationdrawer
+                long navigation_drawer_update  =dataSnapshot.getChildrenCount();
                 for(DataSnapshot data : dataSnapshot.getChildren()){
                     Vehicle v =data.getValue(Vehicle.class);
-                    adapter.addVehicle(v);
-                    //TODO Calculate Number of vehicules for Navigationdrawer
+                    myUsersRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            assert v != null;
+                            User user =dataSnapshot.child(v.getId()).getValue(User.class);
+                            if(user!=null && user.getIsAdmin()==0)
+                            adapter.addUserArray(new Users_Array(user,v));
+                            isImageEmpty();
+                        }
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+
+
+
                 }
             }
 
@@ -170,43 +186,46 @@ public class Fragment_Users extends Fragment {
     public void swip_action(Users_Array users_array,boolean isLeft){
         User user= users_array.getUser();
         Vehicle v= users_array.getVehicle();
-        if(user!=null){
-           if(isLeft){
-               switch(user.getIsAdmin()){
-                   case 0:
-                        adapter.ban(user);
-                       break;
-                   case 2:
-                       adapter.ban(user);
-                       break;
-                   case 1:
-                       adapter.ban(user);
-                       break;
-                   case 3:
-                       adapter.unBan(user,v);
-                       break;
-               }
-           }else {
-               switch (user.getIsAdmin()) {
-                   case 0:
-                       adapter.track(v);
-                       break;
-                   case 2:
-                       adapter.ban(user);
-                       break;
-                   case 1:
-                       adapter.acceptAdmin(user);
-                       break;
-                   case 3:
-                       adapter.unBan(user, v);
-                       break;
-               }
-           }
-        }
-
-
-
-
+        if(isUser){
+            if(user!=null){
+                if(isLeft){
+                    switch(user.getIsAdmin()){
+                        case 0:
+                            adapter.ban(user);
+                            break;
+                        case 2:
+                            adapter.ban(user);
+                            break;
+                        case 1:
+                            adapter.ban(user);
+                            break;
+                        case 3:
+                            adapter.unBan(user,v);
+                            break;
+                    }
+                }else {
+                    switch (user.getIsAdmin()) {
+                        case 0:
+                            adapter.track(v,true);
+                            break;
+                        case 2:
+                            adapter.ban(user);
+                            break;
+                        case 1:
+                            adapter.acceptAdmin(user);
+                            break;
+                        case 3:
+                            adapter.unBan(user, v);
+                            break;
+                    }
+                }
+        }}
+        else{
+                if(isLeft){
+                    adapter.track(v,false);
+                }else
+                    adapter.track(v,true);
+            }
     }
 
     /*
@@ -217,7 +236,13 @@ public class Fragment_Users extends Fragment {
         int imgRes=R.drawable.bubble;
         if (isLeft) {
             switch (user.getIsAdmin()) {
-                case 0:case 2 :case 1:
+                case 0:
+                    if(isUser)
+                        imgRes=R.drawable.ban;
+                    else
+                        imgRes=R.drawable.untrack;
+                    break;
+                    case 2 :case 1:
                     imgRes=R.drawable.ban;
                     break;
                 case 3:

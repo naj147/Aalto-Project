@@ -4,14 +4,20 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.florent37.materialtextfield.MaterialTextField;
 import com.github.jorgecastilloprz.FABProgressCircle;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,6 +44,7 @@ public class SignUpFragment extends Fragment {
     EditText email,pass,passConf;
     private FirebaseAuth mAuth;
     FirebaseDatabase mDatabase;
+    private String Error="";
     public SignUpFragment() {
         // Required empty public constructor
     }
@@ -53,40 +60,128 @@ public class SignUpFragment extends Fragment {
     }
 
     private void setupSignUpButtons(View view) {
+        Error="";
         LoadingView type = (LoadingView) view.findViewById(R.id.choicebuttonview);
         LoadingView signupButton = (LoadingView) view.findViewById(R.id.signupbuttonview);
+        TextView textlabel=(TextView) view.findViewById(R.id.textlabelsignup);
         email=(EditText) view.findViewById(R.id.signupEmailInputText);
         pass=(EditText) view.findViewById(R.id.signupPassInputText);
         passConf=(EditText) view.findViewById(R.id.signupPassConfInputText);
         type.addAnimation(Color.parseColor("#C7E7FB"), R.drawable.vehicule, LoadingView.FROM_BOTTOM);
         type.addAnimation(Color.parseColor("#FF4218"), R.drawable.admin, LoadingView.FROM_LEFT);
+        MaterialTextField emailTextField= (MaterialTextField) view.findViewById(R.id.signupEmailExpand);
+        MaterialTextField passTextField=(MaterialTextField) view.findViewById(R.id.signupPassExpand);
+        TextInputLayout emailTextInputLayout= (TextInputLayout) view.findViewById(R.id.signupEmailInputLayout);
+        TextInputLayout passTextInputLayout=(TextInputLayout) view.findViewById(R.id.signupPassInputLayout);
+        MaterialTextField passConfTextField=(MaterialTextField) view.findViewById(R.id.signupPassConfExpand);
+        TextInputLayout passConfTextInputLayout= (TextInputLayout) view.findViewById(R.id.signupPassConfInputLayout);
 
-        type.setOnClickListener(new View.OnClickListener() {
+        emailTextField.expand();
+        passTextField.expand();
+        passConfTextField.expand();
+
+        email.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
-                type.startAnimation();
-                type.addListener(new LoadingView.LoadingListener() {
-                    @Override
-                    public void onAnimationStart(int currentItemPosition) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(int nextItemPosition) {
-
-                    }
-
-                    @Override
-                    public void onAnimationEnd(int nextItemPosition) {
-                        choice = nextItemPosition;
-                        if (choice == 0) {
-                            Toast.makeText(getContext(), "Admin", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getContext(), "Vehicle", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
             }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String string= s.toString();
+
+                if(string.trim().length()<=0){
+                    emailTextInputLayout.setErrorEnabled(true);
+                    Error="You need to enter an email";
+                    emailTextInputLayout.setError(Error);
+                }
+                else{
+                    Error=Utils.emailError(string);
+                    emailTextInputLayout.setError(Error);
+
+                }
+            }
+        });
+        pass.addTextChangedListener(new TextWatcher() {
+                                        @Override
+                                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                        }
+
+                                        @Override
+                                        public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                        }
+
+                                        @Override
+                                        public void afterTextChanged(Editable s) {
+                                            String string = s.toString();
+
+                                            if (string.trim().length() <= 0) {
+                                                passTextInputLayout.setErrorEnabled(true);
+                                                Error = "You need to enter an password";
+                                                passTextInputLayout.setError(Error);
+                                            } else {
+                                                Error = Utils.passError(string);
+                                                passTextInputLayout.setError(Error);
+
+                                            }
+                                        }
+                                    });
+        passConf.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String string = s.toString();
+
+                if (string.trim().length() <= 0) {
+                    passConfTextInputLayout.setErrorEnabled(true);
+                    Error = "You need to enter an password";
+                    passConfTextInputLayout.setError(Error);
+                } else {
+                    Error = Utils.passError(string);
+                    passConfTextInputLayout.setError(Error);
+
+                }
+            }
+        });
+
+        type.setOnClickListener(v -> {
+            type.startAnimation();
+            type.addListener(new LoadingView.LoadingListener() {
+                @Override
+                public void onAnimationStart(int currentItemPosition) {
+
+                }
+
+                @Override
+                public void onAnimationRepeat(int nextItemPosition) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(int nextItemPosition) {
+                    choice = nextItemPosition;
+                    if (choice == 0) {
+                        Toast.makeText(getContext(), "Admin", Toast.LENGTH_SHORT).show();
+                        textlabel.setText("Admin");
+                    } else {
+                        Toast.makeText(getContext(), "Vehicle", Toast.LENGTH_SHORT).show();
+                        textlabel.setText("Vehicle");
+                    }
+                }
+            });
         });
         FABProgressCircle fabProgressCircle = (FABProgressCircle) view.findViewById(R.id.fabProgressCircle);
         signupButton.addAnimation(Color.parseColor("#FF4218"), R.drawable.save, LoadingView.FROM_LEFT);
@@ -132,6 +227,9 @@ public class SignUpFragment extends Fragment {
                                     // ...
                                 }
                             });
+                }else{
+                    Snackbar.make(getView(),Error,Snackbar.LENGTH_SHORT).show();
+                    Error="";
                 }
 
             }

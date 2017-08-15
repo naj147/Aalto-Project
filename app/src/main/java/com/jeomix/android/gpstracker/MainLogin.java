@@ -18,10 +18,12 @@ import android.databinding.DataBindingUtil;
 public class MainLogin extends AppCompatActivity {
     private ActivityMainLoginBinding binding;
     private boolean isLogin = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main_login);
+
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.bottom_login, new LoginFragment())
                 .replace(R.id.top_login, new LoginFragment())
@@ -31,6 +33,7 @@ public class MainLogin extends AppCompatActivity {
 
         binding.topLogin.setRotation(-90);
         binding.topSignUp.setRotation(90);
+
         binding.button.setOnButtonSwitched(isLogin -> {
             binding.getRoot()
                     .setBackgroundColor(ContextCompat.getColor(
@@ -39,8 +42,7 @@ public class MainLogin extends AppCompatActivity {
         });
 
         binding.bottomLogin.setAlpha(0f);
-        View view =getCurrentFocus();
-        rotate(view);
+        rotate(getCurrentFocus());
     }
 
     @Override
@@ -60,16 +62,15 @@ public class MainLogin extends AppCompatActivity {
                 public void onAnimationEnd(Animator animation) {
                     super.onAnimationEnd(animation);
                     binding.bottomLogin.setAlpha(1f);
+                    binding.topLogin.setRotation(-90);
                 }
             });
             binding.bottomSignUp.animate().alpha(0f);
-            binding.topSignUp.setVisibility(View.GONE);
             binding.bottomSignUp.setVisibility(View.GONE);
-
+            binding.topSignUp.setVisibility(View.GONE);
         } else {
-            binding.topSignUp.setVisibility(View.VISIBLE);
             binding.bottomSignUp.setVisibility(View.VISIBLE);
-            binding.topLogin.setRotation(-90);
+            binding.topSignUp.setVisibility(View.VISIBLE);
             binding.topSignUp.animate().rotation(0).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
@@ -79,8 +80,6 @@ public class MainLogin extends AppCompatActivity {
                 }
             });
             binding.bottomLogin.animate().alpha(0f);
-            binding.topSignUp.setClickable(true);
-            binding.bottomSignUp.setClickable(true);
         }
 
         isLogin = !isLogin;

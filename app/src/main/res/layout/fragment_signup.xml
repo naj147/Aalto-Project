@@ -5,49 +5,77 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.jeomix.android.gpstracker.login.SignUpFragment">
-
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/signupEmailInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/signupEmailExpand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/ic_perm_identity_black_48dp"
+        app:mtf_labelColor="@color/text"
+        >
     <EditText
         android:id="@+id/signupEmailInputText"
-        android:layout_width="200dp"
-        android:layout_height="56dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="52dp"
-        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
         android:background="@drawable/bubble"
-        android:gravity="center_vertical"
-        android:paddingStart="32dp"
         android:hint="@string/email"
-        android:paddingLeft="32dp"
         android:inputType="textEmailAddress" />
-
+</com.github.florent37.materialtextfield.MaterialTextField>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/signupPassInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/signupPassExpand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/ic_vpn_key_black_48dp"
+        app:mtf_labelColor="@color/text"
+        >
     <EditText
         android:id="@+id/signupPassInputText"
-        android:layout_width="200dp"
-        android:layout_height="56dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/bubble"
-        android:gravity="center_vertical"
-        android:textColor="#ffffff"
-        android:paddingStart="32dp"
+        android:textColor="@color/text"
         android:hint="@string/password"
-        android:paddingLeft="32dp"
         android:inputType="textPassword" />
 
+</com.github.florent37.materialtextfield.MaterialTextField>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/signupPassConfInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/signupPassConfExpand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mtf_image="@drawable/ic_vpn_key_black_48dp"
+        app:mtf_labelColor="@color/text"
+        >
     <EditText
         android:id="@+id/signupPassConfInputText"
-        android:layout_width="200dp"
-        android:layout_height="56dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/bubble"
-        android:gravity="center_vertical"
-        android:textColor="#ffffff"
-        android:paddingStart="32dp"
+        android:textColor="@color/text"
         android:hint="@string/confirm_password"
-        android:paddingLeft="32dp"
         android:inputType="textPassword"/>
-
+</com.github.florent37.materialtextfield.MaterialTextField>
+    </android.support.design.widget.TextInputLayout>
         <io.saeid.fabloading.LoadingView
             android:layout_marginTop="16dp"
             android:layout_marginBottom="30dp"
@@ -84,6 +112,7 @@
             />
     </com.github.jorgecastilloprz.FABProgressCircle>
         <TextView
+            android:id="@+id/textlabelsignup"
             android:textColor="@color/colorPrimary"
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"

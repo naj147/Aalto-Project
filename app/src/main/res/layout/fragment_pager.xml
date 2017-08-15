@@ -14,9 +14,11 @@
     <devlight.io.library.ntb.NavigationTabBar
         android:id="@+id/ntb"
         android:layout_width="match_parent"
-        android:layout_height="60px"
+        android:layout_height="110px"
         app:ntb_badge_gravity="top"
         app:ntb_badge_position="right"
+        app:ntb_bg_color="@color/colorPrimary"
+        app:ntb_badge_bg_color="@color/colorPrimaryDark"
         app:ntb_badged="true"
         app:ntb_scaled="true"
         app:ntb_tinted="true"
