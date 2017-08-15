@@ -1,5 +1,7 @@
 **# Welcome to the Aalto-Project wiki!**
 
+** greetings, ** 
+
 This is a project created to answer to a task in order to qualify the contributors for a post inside MOSAIC-LAB  
 
 This is a fruit of 11 days straight of work including analyzing, programming and testing of the app.
@@ -35,7 +37,7 @@ This is a fruit of 11 days straight of work including analyzing, programming and
     
 ####Note
 
-    I made sure the hard parts of the code are well commented and well structed so it's easy for you guys to follow it. 
+    I made sure the hard parts of the code are well commented and well structured so it's easy for you guys to follow it. 
 
 ####Video Demo  
 
@@ -49,7 +51,7 @@ This is a fruit of 11 days straight of work including analyzing, programming and
     !["Aalto Play"](http://imgur.com/a/3t1MI) 
     
 ####End Note
-    I hope you've liked the application and looking forward for your feedback. 
+    I hope you guys have liked the application and looking forward for your feedback. 
 
 
     
