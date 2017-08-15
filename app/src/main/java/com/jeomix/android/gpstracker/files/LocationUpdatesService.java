@@ -339,7 +339,7 @@ public class LocationUpdatesService extends Service {
         mLocationRequest = new LocationRequest();
 
         //REMOVE THE METERS UPDATE TESTING PURPOSES
-//        mLocationRequest.setSmallestDisplacement(UPDATE_INTERVAL_IN_METERS);
+        mLocationRequest.setSmallestDisplacement(UPDATE_INTERVAL_IN_METERS);
         mLocationRequest.setInterval(UPDATE_INTERVAL_IN_MILLISECONDS);
         mLocationRequest.setFastestInterval(FASTEST_UPDATE_INTERVAL_IN_MILLISECONDS);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);

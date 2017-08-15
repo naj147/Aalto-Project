@@ -26,6 +26,7 @@ import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.location.Location;
+import android.os.Handler;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.design.widget.TextInputLayout;
@@ -50,6 +51,7 @@ import android.support.v4.app.ActivityCompat;
 
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -93,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements
     private EditText mTextLabel;
     private EditText mTextVin;
     private TextInputLayout til;
+    private TextView textView;
     VehicleType typeVechicle=VehicleType.motorCycle;
     FirebaseDatabase database ;
 
@@ -138,6 +141,7 @@ public class MainActivity extends AppCompatActivity implements
         mTextLabel=(EditText)findViewById(R.id.labelField);
         mTextVin=(EditText)findViewById(R.id.vinField);
         til = (TextInputLayout)  findViewById(R.id.vinInputLayout);
+        textView=(TextView) findViewById(R.id.tracker_stats);
         mTextVin.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -382,6 +386,7 @@ public class MainActivity extends AppCompatActivity implements
                     public void onAnimationEnd(int nextItemPosition) {
                         if(!mLoadViewMarker.getDrawable().getConstantState().equals(ContextCompat.getDrawable(getApplicationContext(),R.drawable.if_marker_on).getConstantState())){
                             Toast.makeText(getApplicationContext(),"Marker ON",Toast.LENGTH_SHORT).show();
+                            textView.setText("Track is ON");
                             if (!checkPermissions()) {
                                 requestPermissions();
                             } else {
@@ -410,6 +415,7 @@ public class MainActivity extends AppCompatActivity implements
                         }
                         else{
                             Toast.makeText(getApplicationContext(),"Marker OFF",Toast.LENGTH_SHORT).show();
+                            textView.setText("Track is OFF");
                             mService.removeLocationUpdates();
                         }
 
@@ -435,6 +441,8 @@ public class MainActivity extends AppCompatActivity implements
         progressDialog.setTitle("Loading Data From DB");
         progressDialog.setMessage("Please Wait Loading Content...");
         progressDialog.show();
+        final Handler handler = new Handler();
+        handler.postDelayed(progressDialog::dismiss, 400);
         DatabaseReference myRef = database.getReference("vehicules");
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -459,7 +467,6 @@ public class MainActivity extends AppCompatActivity implements
                     switch(v.getType()){
                         case truck :
                             mLoadViewVehicule.addAnimation(Color.parseColor("#FF4218"), R.drawable.if_truck, LoadingView.FROM_TOP);
-                            Toast.makeText(getApplicationContext(),"Truck ",Toast.LENGTH_SHORT).show();
                             break;
                         case motorCycle:
 
@@ -476,8 +483,7 @@ public class MainActivity extends AppCompatActivity implements
                             break;
                     }
                     mLoadViewVehicule.setEnabled(false);
-                    progressDialog.dismiss();
-                    progressDialog.hide();
+
                 }
             }
             @Override
@@ -513,7 +519,6 @@ public void setupVehicules() {
                 public void onAnimationEnd(int nextItemPosition) {
                     switch (nextItemPosition){
                         case 0:
-                            Toast.makeText(getApplicationContext(),"Truck ",Toast.LENGTH_SHORT).show();
                             typeVechicle=VehicleType.truck;
                             break;
                         case 1:

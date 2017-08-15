@@ -98,6 +98,7 @@
             app:mfl_duration="200"
             />
         <TextView
+            android:id="@+id/tracker_stats"
             android:textColor="@color/colorPrimary"
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
