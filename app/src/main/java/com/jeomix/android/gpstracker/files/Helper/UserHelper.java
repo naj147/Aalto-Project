@@ -1,6 +1,6 @@
 package com.jeomix.android.gpstracker.files.Helper;
 
-import com.jeomix.android.gpstracker.files.User;
+import com.jeomix.android.gpstracker.files.Objects.User;
 
 /**
  * Created by jeomix on 8/10/17.

@@ -2,7 +2,7 @@ package com.jeomix.android.gpstracker.files.Helper;
 
 import android.location.Location;
 
-import com.jeomix.android.gpstracker.files.Tracks;
+import com.jeomix.android.gpstracker.files.Objects.Tracks;
 
 /**
  * Created by jeomix on 8/11/17.

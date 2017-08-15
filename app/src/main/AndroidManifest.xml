@@ -40,7 +40,7 @@
 
         <activity android:name=".files.MainActivity" />
         <activity
-            android:name=".MainLogin"
+            android:name=".files.UI.MainLogin"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -56,19 +56,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".files.Main2Activity" />
-        <activity android:name=".files.ErrorActivity" />
+        <activity android:name=".files.UI.Main2Activity" />
+        <activity android:name=".files.UI.ErrorActivity" />
 
 
         <activity
-            android:name=".files.MapsActivity"
+            android:name=".files.UI.MapsActivity"
             android:label="@string/title_activity_maps">
 
         </activity>
-        <activity android:name=".files.FragmentPagerSupport"
+        <activity android:name=".files.UI.FragmentPagerSupport"
             android:label="FragmentPagerSupport">
 
         </activity>
+
     </application>
 
 </manifest>

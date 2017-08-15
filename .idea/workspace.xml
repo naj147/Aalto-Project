@@ -14,106 +14,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="176fba22-028b-4dfc-b3c7-db7aac840d0f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/eventbus_3_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/LocationEvents.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/NavigationbarUpdater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndTracking.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-17-44-43-035.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-20-06-48-077.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-20-09-46-922.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-20-14-17-058.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-20-17-07-467.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-20-20-47-649.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-20-32-17-244.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-20-35-08-633.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-22-20-54-098.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-22-23-10-485.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-22-48-34-395.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-22-51-26-613.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-22-57-52-035.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-11-23-00-30-246.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-12-22-01-00-267.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-12-22-01-16-699.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-12-22-04-08-687.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-12-22-04-11-652.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-12-22-20-43-152.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-12-22-20-45-725.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-12-23-37-17-856.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-12-23-37-30-838.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-03-13-38-547.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-03-32-09-514.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-03-34-42-590.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-03-46-44-360.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-03-47-08-195.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-04-02-19-967.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-04-22-17-398.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-04-24-31-666.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-04-34-27-516.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-04-39-29-746.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-18-14-00-391.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-18-18-43-394.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-18-22-47-241.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-18-44-46-907.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-18-45-56-886.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-21-04-16-336.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-21-10-10-042.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-23-25-48-160.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-23-30-44-289.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-23-35-35-983.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-23-39-09-737.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-13-23-57-01-640.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-00-20-05-678.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-00-23-53-180.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-00-26-41-417.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-00-40-02-828.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-00-59-47-811.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-01-02-51-168.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-01-06-47-543.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-01-12-12-130.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-03-48-03-024.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-03-51-06-865.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-03-55-50-158.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-01-45-502.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-10-57-203.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-15-53-043.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-16-19-320.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-30-09-270.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-31-41-881.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-37-58-324.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-47-18-128.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-56-56-582.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-57-13-633.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-04-59-55-615.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-05-00-42-495.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-05-09-45-567.rawproto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-08-14-05-13-46-889.rawproto" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/customactivityoncrash_2_1_0.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/MainLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MainLogin.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/OnButtonSwitchedListener.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/OnButtonSwitchedListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/ErrorActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/ErrorActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/FragmentPagerSupport.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/FragmentPagerSupport.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Fragment_Users.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/Fragment_Users.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Main2Activity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/Main2Activity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MapsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MapsActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MyRecycle_Adapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MyRecycle_Adapter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/Tracks.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/User.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Users_Array.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/Users_Array.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Vehicle.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/Vehicle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleInterface.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/VehicleInterface.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleTrack.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/VehicleTrack.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleType.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/VehicleType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginButton.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/LoginButton.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/LoginFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/MyBounceInterpolator.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/MyBounceInterpolator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/SignUpFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/SignUpFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/MainLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/MainLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/FragmentPagerSupport.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/FragmentPagerSupport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Fragment_Users.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Fragment_Users.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/LocationEvents.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/LocationEvents.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MapsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MapsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MyRecycle_Adapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MyRecycle_Adapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/SignUpFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/SignUpFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndTracking.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndTracking.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/UserHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/UserHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/SplashScreen.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/SplashScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Utils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_error.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_error.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_login.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/card.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/card.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pager.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_pager.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_signup.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_signup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/jack-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/jack-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
     </list>
     <ignored path="Aalto-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -147,121 +98,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="80" column="46" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainLogin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/MainLogin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="72" column="56" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
-              <folding>
-                <element signature="e#2245#2561#0" expanded="true" />
-                <element signature="e#2560#2561#0" expanded="true" />
-                <element signature="e#2935#3252#0" expanded="true" />
-                <element signature="e#3251#3252#0" expanded="true" />
-                <element signature="e#3446#3507#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider editor-type-id="android-manifest">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state relative-caret-position="425">
+              <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+              <folding>
+                <element signature="e#1076#1094#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6204">
+              <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="values.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.android/build-cache/8f698386c067e8cd3f0270723cc35919ff94c0cf/output/res/values/values.xml">
+      <file leaf-file-name="MainLogin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MainLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-249">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_error.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_error.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ErrorActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/ErrorActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/LoginFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="228" column="22" selection-start-line="228" selection-start-column="22" selection-end-line="228" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arrays.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main2.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main2Activity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/Main2Activity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="values.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.android/build-cache/1e9f78910e30324c70a46168aa56446f6dd4404b/output/res/values/values.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_signup.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_signup.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
-              <folding>
-                <element signature="e#2252#2270#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignUpFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/SignUpFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="185" column="26" selection-start-line="185" selection-start-column="26" selection-end-line="185" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_login.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-              <folding>
-                <element signature="e#2303#2321#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -939,6 +872,11 @@
                 <option name="description" value="Prepare com.android.support:support-v4:25.3.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportSupportV42531Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare cat.ereza:customactivityoncrash:2.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareCatErezaCustomactivityoncrash210Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare devlight.io:navigationtabbar:1.2.5" />
@@ -1831,6 +1769,11 @@
                 <option name="name" value="prepareComAndroidSupportSupportV42531Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare cat.ereza:customactivityoncrash:2.1.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareCatErezaCustomactivityoncrash210Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare devlight.io:navigationtabbar:1.2.5" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareDevlightIoNavigationtabbar125Library" />
@@ -2102,7 +2045,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4505950180832" />
+        <entry key="$PROJECT_DIR$" value="4505992535227" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2457,57 +2400,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_error.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/tracks.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleType.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Vehicle.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/VehicleTrack.java" />
-        <option value="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MyLocationClass.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/NonSwipeableViewPager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Fragment_History.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Result_Adapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Result_Array.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/history_fragment.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragmenet_history.xml" />
-        <option value="$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/card.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/History_Array.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/History_Adapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Fragment_history.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginButton.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/BuilderManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/User.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Users_Array.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/NavigationbarUpdater.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndTracking.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/LocationEvents.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MyRecycle_Adapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_pager.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/FragmentPagerSupport.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Fragment_Users.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MapsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_signup.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/SignUpFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/MainLogin.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MyRecycle_Adapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Fragment_Users.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Utils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/SignUpFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_signup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginButton.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/FragmentPagerSupport.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MapsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/FragmentPagerSupport.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/Fragment_Users.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MyRecycle_Adapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/VehicleType.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/VehicleTrack.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/VehicleInterface.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/Vehicle.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/Users_Array.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/User.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/Tracks.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MainLogin.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/OnButtonSwitchedListener.java" />
+        <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MapsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/myApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/Main2Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_error.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/ErrorActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/LoginFragment.java" />
       </list>
     </option>
   </component>
@@ -2554,28 +2497,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Gradle Scripts" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Aalto-project" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles.xml" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2642,7 +2563,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gpstracker" />
+              <option name="myItemId" value="files" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2660,59 +2581,33 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gpstracker" />
+              <option name="myItemId" value="files" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Aalto-project" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="files" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Aalto-project" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpstracker" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="files" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Aalto-project" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gpstracker" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="files" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EventBusClasses" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2741,7 +2636,7 @@
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../NavigationTabBar-master" />
-    <property name="device.picker.selection" value="4d00300a5a3e8057" />
+    <property name="device.picker.selection" value="0123456789ABCDEF" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="VectorAssetImportPath" value="$USER_HOME$/Downloads/18f4fe7e8540f1cb283d2c7d8ad21d69-4eef53795e5ba7d8026c9754e503f3d3c9cd6274" />
@@ -2751,14 +2646,14 @@
     <property name="DEBUGGER_ID" value="Auto" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.jeomix.android.gpstracker.files" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.jeomix.android.gpstracker.files" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jeomix.android.gpstracker.files" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -3085,7 +2980,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="24" width="1885" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35053763" sideWeight="0.49157152" order="7" side_tool="false" content_ui="tabs" />
@@ -3094,7 +2989,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.81182796" sideWeight="0.2713431" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6924731" sideWeight="0.7286569" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45731375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45731375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.4980968" order="10" side_tool="false" content_ui="tabs" />
@@ -3102,6 +2997,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5084285" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1865144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3115,7 +3011,6 @@
       <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21914084" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3142,7 +3037,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.4980968" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5084285" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17237629" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1865144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -3164,15 +3059,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MyRecycle_Adapter.java</url>
-          <line>287</line>
-          <properties class="com.jeomix.android.gpstracker.files.MyRecycle_Adapter" method="removeItem" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MyRecycle_Adapter.java</url>
+          <line>283</line>
+          <properties class="com.jeomix.android.gpstracker.files.UI.MyRecycle_Adapter" method="removeItem" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MyRecycle_Adapter.java</url>
-          <line>270</line>
-          <properties class="com.jeomix.android.gpstracker.files.MyRecycle_Adapter" method="addUserArray" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MyRecycle_Adapter.java</url>
+          <line>266</line>
+          <properties class="com.jeomix.android.gpstracker.files.UI.MyRecycle_Adapter" method="addUserArray" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
@@ -3184,202 +3079,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/bubble.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="297" column="15" selection-start-line="297" selection-start-column="15" selection-end-line="297" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/graphics/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/graphics/drawable/shapes/RectShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amulyakhare/com.amulyakhare.textdrawable/1.0.1/464f77c149aad9f5dbb3aaf846cd52d57b61df4b/com.amulyakhare.textdrawable-1.0.1-sources.jar!/com/amulyakhare/textdrawable/TextDrawable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Android/Sdk/extras/android/m2repository/com/android/support/recyclerview-v7/25.3.1/recyclerview-v7-25.3.1-sources.jar!/android/support/v7/widget/LinearLayoutManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="595" column="0" selection-start-line="595" selection-start-column="0" selection-end-line="595" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Android/Sdk/extras/android/m2repository/com/android/support/recyclerview-v7/25.3.1/recyclerview-v7-25.3.1-sources.jar!/android/support/v7/widget/RecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="3844" column="0" selection-start-line="3844" selection-start-column="0" selection-end-line="3844" selection-end-column="0" />
-          <folding>
-            <element signature="e#228067#228068#0" expanded="false" />
-            <element signature="e#228133#228134#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/os/MessageQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-25/android/graphics/drawable/shapes/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#1147#1148#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/data-binding-layout-out/debug/layout/fragment_pager.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Users_Array.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-          <folding>
-            <element signature="e#819#820#0" expanded="false" />
-            <element signature="e#849#850#0" expanded="false" />
-            <element signature="e#896#897#0" expanded="false" />
-            <element signature="e#934#935#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Tracks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/TrackHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="77" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndTracking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/NavigationbarUpdater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/NonSwipeableViewPager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/LocationEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -3392,14 +3091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="1600" column="34" selection-start-line="1600" selection-start-column="32" selection-end-line="1600" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -3423,17 +3114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/FragmentPagerSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="156" column="14" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
-          <folding>
-            <element signature="e#2351#2352#0" expanded="true" />
-            <element signature="e#2387#2388#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_pager.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3453,22 +3133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="320" column="45" selection-start-line="320" selection-start-column="45" selection-end-line="320" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MyRecycle_Adapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="188" column="16" selection-start-line="188" selection-start-column="16" selection-end-line="188" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_usersandcars.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3476,82 +3140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_login.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Fragment_Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="152" column="16" selection-start-line="152" selection-start-column="16" selection-end-line="168" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MapsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="100" column="138" selection-start-line="100" selection-start-column="49" selection-end-line="100" selection-end-column="138" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5838#5839#0" expanded="true" />
-            <element signature="e#5915#5916#0" expanded="true" />
-            <element signature="e#10118#10119#0" expanded="true" />
-            <element signature="e#10186#10187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/MyBounceInterpolator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -3567,23 +3155,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_signup.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$USER_HOME$/.android/build-cache/8f698386c067e8cd3f0270723cc35919ff94c0cf/output/res/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
-          <folding>
-            <element signature="e#2252#2270#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="126" column="77" selection-start-line="126" selection-start-column="77" selection-end-line="126" selection-end-column="77" />
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -3596,59 +3171,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.android/build-cache/8f698386c067e8cd3f0270723cc35919ff94c0cf/output/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/MainLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="72" column="56" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
-          <folding>
-            <element signature="e#2245#2561#0" expanded="true" />
-            <element signature="e#2560#2561#0" expanded="true" />
-            <element signature="e#2935#3252#0" expanded="true" />
-            <element signature="e#3251#3252#0" expanded="true" />
-            <element signature="e#3446#3507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/LoginFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="80" column="46" selection-start-line="80" selection-start-column="46" selection-end-line="80" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/login/SignUpFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="185" column="26" selection-start-line="185" selection-start-column="26" selection-end-line="185" selection-end-column="26" />
+        <state relative-caret-position="426">
+          <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -3658,11 +3184,343 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+        <state relative-caret-position="90">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_login.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_signup.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.android/build-cache/fa4a20cc1e4f485e7422a33de7c97566a3de9ceb/output/jars/classes.jar!/com/google/android/gms/maps/model/Polyline.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Helper/BackEndManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/LocationUpdatesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="320" column="45" selection-start-line="320" selection-start-column="45" selection-end-line="320" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/Tracks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/Users_Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/VehicleInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/VehicleTrack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/VehicleType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/FragmentPagerSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/Fragment_Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MyRecycle_Adapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/Objects/OnButtonSwitchedListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/SplashScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/SignUpFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/MyBounceInterpolator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/LocationEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/EventBusClasses/NavigationbarUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/LoginButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2280">
+          <caret line="215" column="31" selection-start-line="215" selection-start-column="31" selection-end-line="215" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="57" column="51" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MapsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="223" column="43" selection-start-line="223" selection-start-column="43" selection-end-line="223" selection-end-column="43" />
           <folding>
-            <element signature="e#2303#2321#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/myApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.android/build-cache/7c8daed102f42186b10767f33690d68ef2352fd3/output/jars/classes.jar!/cat/ereza/customactivityoncrash/activity/DefaultErrorActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+          <folding>
+            <element signature="e#1076#1094#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_error.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6204">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/ErrorActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/MainLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-249">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/UI/Main2Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/jeomix/android/gpstracker/files/login/LoginFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="228" column="22" selection-start-line="228" selection-start-column="22" selection-end-line="228" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

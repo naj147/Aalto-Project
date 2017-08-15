@@ -3,7 +3,7 @@ package com.jeomix.android.gpstracker.files.Helper;
 import android.location.Location;
 
 import com.google.firebase.database.ValueEventListener;
-import com.jeomix.android.gpstracker.files.Vehicle;
+import com.jeomix.android.gpstracker.files.Objects.Vehicle;
 
 import java.util.ArrayList;
 

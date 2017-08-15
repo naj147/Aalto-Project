@@ -32,6 +32,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.jeomix.android.gpstracker.R;
 import com.jeomix.android.gpstracker.files.Helper.TrackHelper;
 import com.jeomix.android.gpstracker.files.Helper.UserHelper;
+import com.jeomix.android.gpstracker.files.Objects.Tracks;
 
 /**
  * A bound and started service that is promoted to a foreground service when location updates have

@@ -10,5 +10,5 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jeomix.android.gpstracker.files.MapsActivity" />
+    tools:context="com.jeomix.android.gpstracker.files.UI.MapsActivity" />
 </RelativeLayout>

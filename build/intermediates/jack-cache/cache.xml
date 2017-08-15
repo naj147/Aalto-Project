@@ -110,6 +110,12 @@
         <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/constraint-layout-solver-1.0.2-2ad59cd89abdcb57df7fe04bb926b6fa7b6c8262.jar" />
     </item>
     <item
+        jar="/home/jeomix/.android/build-cache/7c8daed102f42186b10767f33690d68ef2352fd3/output/jars/classes.jar"
+        revision="25.0.3"
+        sha1="65211a128ff75b95770a14152c369adb0b4a641a">
+        <dex dex="/home/jeomix/android/Aalto-project/app/build/intermediates/transforms/preJackPackagedLibraries/debug/jars/8000/1f/classes-06eb995f04bd4fe060aecdb72ac2019f16ad4c14.jar" />
+    </item>
+    <item
         jar="/home/jeomix/.android/build-cache/978d6d07de509814ccafdf8c3a583aa552ec5d02/output/jars/classes.jar"
         revision="25.0.3"
         sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">

@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:background="#131A56"
         android:fitsSystemWindows="true"
-        tools:context=".MainLogin">
+        tools:context=".files.UI.MainLogin">
 
         <FrameLayout
             android:id="@+id/bottom_login"
@@ -23,7 +23,7 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.jeomix.android.gpstracker.login.LoginButton
+    <com.jeomix.android.gpstracker.files.login.LoginButton
     android:id="@+id/button"
     android:layout_alignParentBottom="true"
     android:layout_width="wrap_content"

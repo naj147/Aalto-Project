@@ -4,9 +4,17 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.jeomix.android.gpstracker.login.SignUpFragment">
-    <android.support.design.widget.TextInputLayout
+    tools:context=".files.login.SignUpFragment">
+    <LinearLayout
         android:layout_marginTop="16dp"
+        android:id="@+id/signUpParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+    <android.support.design.widget.TextInputLayout
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:id="@+id/signupEmailInputLayout"
@@ -75,10 +83,12 @@
         android:hint="@string/confirm_password"
         android:inputType="textPassword"/>
 </com.github.florent37.materialtextfield.MaterialTextField>
-    </android.support.design.widget.TextInputLayout>
+
+</android.support.design.widget.TextInputLayout>
+    </LinearLayout>
         <io.saeid.fabloading.LoadingView
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="20dp"
            android:layout_gravity="center_horizontal"
             android:id="@+id/choicebuttonview"
             android:layout_width="wrap_content"
@@ -95,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleX="1.5"
-        app:arcColor="#FF5722"
+        app:arcColor="#FFFFFF"
         app:arcWidth="2dp"
         app:finalIcon="@drawable/ic_done"
         android:scaleY="1.5"
@@ -113,13 +123,12 @@
     </com.github.jorgecastilloprz.FABProgressCircle>
         <TextView
             android:id="@+id/textlabelsignup"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginTop="16dp"
+            android:textColor="@color/text"
+            android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Admin"/>
-
+            android:text="Vehicule"/>
 
 </LinearLayout>

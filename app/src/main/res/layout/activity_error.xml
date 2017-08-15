@@ -4,11 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jeomix.android.gpstracker.files.ErrorActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Error"
-        android:textSize="40sp"/>
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context="com.jeomix.android.gpstracker.files.UI.ErrorActivity">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal|center_vertical"
+            android:text="An error occured\nsorry for the inconvience"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Be sure to have Internet / Location drivers"
+            android:textSize="15sp"/>
+        <Button
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restart"
+            android:onClick="restart"/>
+
+
 </LinearLayout>

@@ -1,11 +1,6 @@
 package com.jeomix.android.gpstracker.files.EventBusClasses;
 
-import android.location.Location;
-
-import com.google.android.gms.maps.model.LatLng;
-import com.jeomix.android.gpstracker.files.Vehicle;
-
-import java.util.List;
+import com.jeomix.android.gpstracker.files.Objects.Vehicle;
 
 /**
  * Created by jeomix on 8/14/17.

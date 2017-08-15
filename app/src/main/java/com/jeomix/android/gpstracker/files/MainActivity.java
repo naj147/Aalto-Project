@@ -54,8 +54,6 @@ import android.widget.Toast;
 
 
 import com.github.florent37.materialtextfield.MaterialTextField;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -64,6 +62,9 @@ import com.google.firebase.database.ValueEventListener;
 import com.jeomix.android.gpstracker.BuildConfig;
 import com.jeomix.android.gpstracker.R;
 import com.jeomix.android.gpstracker.files.Helper.UserHelper;
+import com.jeomix.android.gpstracker.files.Objects.User;
+import com.jeomix.android.gpstracker.files.Objects.Vehicle;
+import com.jeomix.android.gpstracker.files.Objects.VehicleType;
 
 import io.saeid.fabloading.LoadingView;
 
@@ -440,7 +441,6 @@ public class MainActivity extends AppCompatActivity implements
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.hasChild(UserHelper.getCurrentUser().getId())){
                     Error="";
-
                    Vehicle v= dataSnapshot.child(UserHelper.getCurrentUser().getId()).getValue(Vehicle.class);
                     mTextLabel.setText(v.getLabel());
                     mTextVin.setText(v.getVin());
@@ -477,6 +477,7 @@ public class MainActivity extends AppCompatActivity implements
                     }
                     mLoadViewVehicule.setEnabled(false);
                     progressDialog.dismiss();
+                    progressDialog.hide();
                 }
             }
             @Override

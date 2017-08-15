@@ -14,7 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.jeomix.android.gpstracker.MainLogin;
+import com.jeomix.android.gpstracker.files.UI.MainLogin;
 import com.jeomix.android.gpstracker.R;
 
 public class SplashScreen extends AppCompatActivity {

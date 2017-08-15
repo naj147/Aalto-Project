@@ -17,11 +17,13 @@
 package com.jeomix.android.gpstracker.files;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.location.Location;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Patterns;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.jeomix.android.gpstracker.R;
@@ -70,6 +72,15 @@ public class Utils {
         }
 
         return error;
+    }
+
+//HIDE SOFT KEYBOARD
+    public static void hideSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager =
+                (InputMethodManager) activity.getSystemService(
+                        Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(
+                activity.getCurrentFocus().getWindowToken(), 0);
     }
 
     public static Long convertStringToTimestamp(String str_date) {
