@@ -34,6 +34,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.jeomix.android.gpstracker.R;
+import com.jeomix.android.gpstracker.files.Helper.BackEndManager;
+import com.jeomix.android.gpstracker.files.Helper.UserHelper;
 import com.jeomix.android.gpstracker.files.Objects.User;
 import com.jeomix.android.gpstracker.files.Objects.Users_Array;
 import com.jeomix.android.gpstracker.files.Objects.Vehicle;
@@ -139,22 +141,25 @@ public class Fragment_Users extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot data : dataSnapshot.getChildren()){
                     User user=data.getValue(User.class);
-                    myVehRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            Users_Array user_array = new Users_Array(user);
-                            if(user!=null && dataSnapshot.child(user.getId()).exists()){
-                                Vehicle v= dataSnapshot.child(user.getId()).getValue(Vehicle.class);
-                                user_array.setVehicle(v);
+                    if(!user.equals( UserHelper.getCurrentUser())){
+                        myVehRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                Users_Array user_array = new Users_Array(user);
+                                if(user!=null && dataSnapshot.child(user.getId()).exists()){
+                                    Vehicle v= dataSnapshot.child(user.getId()).getValue(Vehicle.class);
+                                    user_array.setVehicle(v);
+                                }
+                                adapter.addUserArray(user_array);
+                                isImageEmpty();
                             }
-                            adapter.addUserArray(user_array);
-                            isImageEmpty();
-                        }
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
 
-                        }
-                    });
+                            }
+                        });
+                    }
+
                 }
 //                progressDialog.dismiss();
             }
