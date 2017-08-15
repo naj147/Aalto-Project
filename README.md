@@ -1,4 +1,6 @@
-#Welcome to the Aalto-Project wiki!
+	
+##Welcome To Aalto-Project Wiki! 
+----------
 
 ** greetings, ** 
 
