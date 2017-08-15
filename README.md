@@ -49,7 +49,7 @@ This is a fruit of 11 days straight of work including analyzing, programming and
 	This video showcases all the fonctionalities of the app, the different actors  
 	and also show a ** real life ** demonstration
 
-!["Aalto Play"](http://imgur.com/a/3t1MI) 
+!["Aalto Play"](http://i.imgur.com/VMJzvuG.png) 
 
 ["Play The Demo"](youtube.com)
 ------------------------------
