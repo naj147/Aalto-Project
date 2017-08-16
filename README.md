@@ -36,7 +36,8 @@ This is a fruit of 11 days straight of work including analyzing, programming and
 
 	Just be sure to respect the environment mentioned above and download the repos on your pc    
     and then import it using Android studio then clean the project and rebuild it.   
-    In case you face some errors be sure to invalidate the cache and repeat the process previously mentioned.   
+    In case you face some errors be sure to invalidate the cache and repeat the process previously mentioned.  
+    The Admin Account is ( admin@admin.com : 123456 )
     
 ####Note
 
